@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting Started - Osgiliath Enterprise framework</title>
+  <meta name="author" content="Charlie Mordant">
+
+  
+  <meta name="description" content="Getting Started Jun 22nd, 2014 6:28 pm Prerequisite You must have a JDK 1.6 or newer (JDK 8 is not supported for now) in order to compile.
+Maven 3.2 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://OsgiliathEnterprise.github.io/projects/documentation/gettingstarted.html">
+  <link href="/net.osgiliath.parent/favicon.png" rel="icon">
+  <link href="/net.osgiliath.parent/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/net.osgiliath.parent/atom.xml" rel="alternate" title="Osgiliath Enterprise framework" type="application/atom+xml">
+  <script src="/net.osgiliath.parent/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/net.osgiliath.parent/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52173804-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/net.osgiliath.parent/">Osgiliath Enterprise framework</a></h1>
+  
+    <h2>OSGI to the masses!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/net.osgiliath.parent/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:OsgiliathEnterprise.github.io/projects" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/net.osgiliath.parent/">Blog</a></li>
+  <li><a href="/net.osgiliath.parent/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Getting Started</h1>
+    <p class="meta">
+
+
+
+
+<time class='entry-date' datetime='2014-06-22T18:28:00+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:28 pm</span></time></p>
+  </header>
+  
+  <article>
+<header>
+<H1>Prerequisite</H1>
+</header>
+You must have a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 1.6</a> or newer (JDK 8 is not supported for now) in order to compile.
+<a href="http://maven.apache.org/download.cgi">Maven 3.2.1 minimum</a> is used as a build tool.
+<a href="http://nodejs.org/download/">Npm</a> and <a href="http://rubyinstaller.org/">ruby</a> must be installed to compile the UI module.
+<a href="http://karaf.apache.org/index/community/download.html">Karaf 3.0.x</a> as a runtime environment.
+</article>
+<article>
+<header>
+<H2>Installation</H2>
+</header>
+For UI module:
+Run these commands before doing anything:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo npm -g install grunt-cli
+</span><span class='line'>sudo npm -g install phantomjs
+</span><span class='line'>sudo npm -g install bower
+</span><span class='line'>gem install sass
+</span><span class='line'>gem install compass
+</span></code></pre></td></tr></table></div></figure>
+</article>
+<article>
+<header>
+<H2>IDE</H2>
+</header>
+Development has been tested on an Eclipse platform (but can be supported by others IDE) with the following plugins:
+<ul>
+ 	<li><a href="http://projectlombok.org/">Lombok</a> (Mandatory): helpers for coding with far less LOC.</li>
+ 	<li>M2E: Maven support for eclipse (NOT mandatory, no M2E support for the UI module).</li>
+ 	<li>Egit: for source control (you can also use any other source control tool).</li>
+</ul>
+</article>
+<article>
+<header>
+<h3>Other useful plugins</h3>
+</header>
+<ul>
+ <li><a href="https://github.com/spring-projects/spring-ide">Spring IDE</a> (Highly recommended too, but incompatible with the last M2E version): autocompletion and error detection in XML files (typically blueprint ones).</li>
+<li><a href="http://bndtools.org/">BndTools</a>: Manifest template graphical edition.</li>
+<li><a href="http://docs.codehaus.org/display/SONAR/Installing+SonarQube+in+Eclipse">Sonar IDE</a>: integration with Sonar quality server.</li>
+<li>Mylyn tools for Jenkins/Redmine: Continuous integration an issue management in Eclipse (not mandatory too).</li>
+<li><a href="http://moreunit.sourceforge.net/#download">MoreUnit to switch between tests classes and tested ones</a></li>
+<li><a href="http://jautodoc.sourceforge.net/index.html#download">JAutoDoc (use carefully, generated doc is sometimes no as accurate as a manually done one)</a></li>
+<li><a href="http://stackoverflow.com/questions/498426/mylyn-redmine-integration">Redmine Mylyn connector</a></li>
+<li><a href="http://aptana.com/products/studio3/download">Aptana studio for Javascript</a> not recommended, but this is the only viable tool for eclipse, prefer sublime text 3 if you have a little bit of money</li>
+<li>Instead of Aptana studio, you can install some of the <a href="http://www.nodeclipse.org/projects/">NodeEclipse plugin</a>, offering Markdown, js edition&#8230;</li>
+<li><a href="http://tools.jboss.org/features/apachecamel.html">Fuse IDE</a> also offer some Karaf shortcuts, Camel helpers&#8230;</li>
+</ul>
+</article>
+<article>
+<header>
+<H1>QuickStart</H1>
+</header>
+In eclipse go to new->Maven project and choose one of the net.osgiliath.archetype you want to work with (may be the parent one to begin, then others&#8230;).<module type> archetype on the archetype selection (take care of the &#8216;include snapshot&#8217; checkbox if you want to use Osgiliath SNAPSHOT archetypes).
+
+To compile your project, right click on it->Run As-> Maven install.
+
+For UI module:
+You can use grunt at the root of your ui module instead of maven to interact within the build chain:
+grunt test: executes tests
+grunt serve: runs a server for your ui with livereload enabled
+grunt build: same as running mvn clean install on the same module.
+</article>
+<article>
+<header>
+<H1>Framework list</H1>
+</header>
+<ul>
+	<li><a href="http://projectlombok.org/">Lombok</a></li>
+	<li><a href="https://code.google.com/p/guava-libraries/wiki/GuavaExplained?tm=6">Guava</a></li>
+	<li><a href="http://aries.apache.org/modules/jndiproject.html">Aries JNDI</a></li>
+	<li><a href="http://aries.apache.org/modules/blueprint.html">Aries blueprint</a></li>
+	<li><a href="http://aries.apache.org/modules/jpaproject.html">Aries JPA</a></li>
+	<li><a href="http://openjpa.apache.org/builds/2.2.2/apache-openjpa/docs/main.html">OpenJPA</a></li>
+	<li><a href="http://docs.spring.io/spring-data/jpa/docs/1.4.2.RELEASE/reference/html/">Spring-Data-JPA</a></li>
+	<li><a href="http://aries.apache.org/modules/transactionsproject.html">Aries Tx</a></li>
+	<li><a href="http://activemq.apache.org/getting-started.html">ActiveMQ</a></li>
+	<li><a href="http://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html/">Hibernate Validator</a></li>
+	<li><a href="https://ops4j1.jira.com/wiki/display/PAXEXAM3/Getting+Started">Pax-Exam</a></li>
+	<li>Pax-Exam-Karaf</li>
+	<li><a href="https://ops4j1.jira.com/wiki/display/PAXCDI/Getting+Started+for+OSGi+Users">Pax-CDI</a></li>
+	<li><a href="http://karaf.apache.org/manual/latest-2.3.x/quick-start.html">Karaf</a></li>
+	<li><a href="http://docs.spring.io/spring-security/site/start-here.html">Spring-security</a></li>
+	<li><a href="http://camel.apache.org/book-getting-started.html">Apache Camel</a></li>
+	<li><a href="http://cxf.apache.org/docs/jax-rs.html">Cxf-JaxRS</a></li>
+
+	<li><a href="http://angularjs.org/">AngularJs</a></li>
+	<li><a href="http://getbootstrap.com/2.3.2/getting-started.html">Twitter bootstrap</a></li>
+	<li><a href="http://gruntjs.com/">Grunt</a></li>
+	<li><a href="http://karma-runner.github.io/0.10/index.html">Karma</a></li>
+	<li><a href="http://phantomjs.org/">PhantomJs</a></li>
+	<li><a href="http://gotwarlost.github.io/istanbul/">Istanbul</a></li>
+</ul>
+</article>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-22T18:28:00+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:28 pm</span></time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://OsgiliathEnterprise.github.io/projects/documentation/gettingstarted.html" data-via="Tcharl" data-counturl="http://OsgiliathEnterprise.github.io/projects/documentation/gettingstarted.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="small"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/net.osgiliath.parent/blog/2014/06/22/changelogs/">Changelogs</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/OsgiliathEnterprise">@OsgiliathEnterprise</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'OsgiliathEnterprise',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/net.osgiliath.parent/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+CharlieMordant?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Charlie Mordant -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'osgiliathenterprise';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://OsgiliathEnterprise.github.io/projects/documentation/gettingstarted.html';
+        var disqus_url = 'http://OsgiliathEnterprise.github.io/projects/documentation/gettingstarted.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

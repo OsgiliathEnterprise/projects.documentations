@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Business Archetype - Osgiliath Enterprise framework</title>
+  <meta name="author" content="Charlie Mordant">
+
+  
+  <meta name="description" content="Business Archetype Jun 22nd, 2014 6:48 pm Purpose The business module is done to make calculation and processing on your datas. You'll be able to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://OsgiliathEnterprise.github.io/projects/documentation/business-archetype.html">
+  <link href="/net.osgiliath.parent/favicon.png" rel="icon">
+  <link href="/net.osgiliath.parent/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/net.osgiliath.parent/atom.xml" rel="alternate" title="Osgiliath Enterprise framework" type="application/atom+xml">
+  <script src="/net.osgiliath.parent/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/net.osgiliath.parent/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52173804-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/net.osgiliath.parent/">Osgiliath Enterprise framework</a></h1>
+  
+    <h2>OSGI to the masses!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/net.osgiliath.parent/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:OsgiliathEnterprise.github.io/projects" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/net.osgiliath.parent/">Blog</a></li>
+  <li><a href="/net.osgiliath.parent/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Business Archetype</h1>
+    <p class="meta">
+
+
+
+
+<time class='entry-date' datetime='2014-06-22T18:48:00+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time></p>
+  </header>
+  
+  <article>
+<header>
+<H1>Purpose</H1>
+</header>
+The business module is done to make calculation and processing on your datas. You&#8217;ll be able to test it (unitary or in its full environment), export its services (synchronously or asynchronously), use functional programing.
+<article>
+<header>
+<H1>Referencing services</H1>
+</header>
+You can reference OSGI services via two ways: via annotations or xml.
+<article>
+<header>
+<H2>Xml way: Blueprint</H2>
+</header>
+Blueprint is an OSGI spec allowing you to reference OSGI services and inject it in your beans. The xml file to edit is located in the src/main/resources/OSGI-INF/blueprint/<context>.xml
+
+You can reference and inject in bean like <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">this</a>:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;helloObjectRepository&quot;</span>
+</span><span class='line'>		<span class="na">interface=</span><span class="s">&quot;net.osgiliath.hello.model.jpa.repository.HelloObjectRepository&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- OSGI service reference --&gt;</span>
+</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJMS&quot;</span>
+</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJMS&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;helloObjectRepository&quot;</span> <span class="na">ref=</span><span class="s">&quot;helloObjectRepository&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/bean&gt;</span><span class="c">&lt;!-- Injection of the service reference in the HelloServicesJMS bean--&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+</article>
+<article>
+<header>
+<H2>Service reference via annotation</H2>
+</header>
+You can also inject your services <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJMS.java" target="_blank">via Annotations</a> (Pax-CDI).
+In order to do this, you&#8217;ve to tweak you pom.xml adding this feature:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;dependency&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;groupId&gt;</span>net.osgiliath.framework<span class="nt">&lt;/groupId&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;version&gt;</span>${osgiliath.framework.maven.version}<span class="nt">&lt;/version&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;artifactId&gt;</span>net.osgiliath.features.karaf-features-cdi<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;type&gt;</span>xml<span class="nt">&lt;/type&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;classifier&gt;</span>features<span class="nt">&lt;/classifier&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;/dependency&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+And add a beans.xml file in your src/main/resources/META-INF:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;beans</span>
+</span><span class='line'>   <span class="na">xmlns=</span><span class="s">&quot;http://java.sun.com/xml/ns/javaee&quot;</span>
+</span><span class='line'>   <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+</span><span class='line'>   <span class="na">xsi:schemaLocation=</span><span class="s">&quot;</span>
+</span><span class='line'><span class="s">      http://java.sun.com/xml/ns/javaee</span>
+</span><span class='line'><span class="s">      http://java.sun.com/xml/ns/javaee/beans_1_0.xsd&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/beans&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+You can now expose and consume your services (and other cdi beans) this way:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@ApplicationScoped</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Provider</span> <span class="kd">implements</span> <span class="n">IProvider</span> <span class="o">{}</span>
+</span><span class='line'><span class="nd">@Default</span>
+</span><span class='line'><span class="nd">@OsgiServiceProvider</span><span class="o">(</span><span class="n">classes</span><span class="o">=</span> <span class="o">{</span><span class="n">IConsumer</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Consumer</span> <span class="kd">implements</span> <span class="n">IConsumer</span><span class="o">{</span>
+</span><span class='line'><span class="nd">@Inject</span>
+</span><span class='line'><span class="nd">@OsgiService</span>
+</span><span class='line'><span class="kd">private</span> <span class="n">IProvider</span> <span class="n">provider</span><span class="o">;</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+</article>
+</article>
+<article>
+<header>
+<H1>REST</H1>
+</header>
+You can <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/java/net/osgiliath/hello/business/impl/HelloServiceJaxRS.java" target="_blank">expose REST web services</a> easily.
+
+Using the REST API, you have to tell with path to access your services:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Path</span><span class="o">(</span><span class="s">&quot;/hello&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">HelloRepository</span> <span class="o">{</span>
+</span><span class='line'>	<span class="nd">@POST</span>
+</span><span class='line'>	<span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML</span><span class="o">)</span>
+</span><span class='line'>	<span class="kd">public</span> <span class="o">&lt;</span><span class="n">S</span> <span class="kd">extends</span> <span class="n">HelloEntity</span><span class="o">&gt;</span> <span class="n">S</span> <span class="nf">save</span><span class="o">(</span><span class="n">S</span> <span class="n">entity</span><span class="o">);</span>
+</span><span class='line'>	<span class="nd">@GET</span>
+</span><span class='line'>	<span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML</span><span class="o">)</span>
+</span><span class='line'>	<span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">HelloEntity</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">expose the service via blueprint</a>:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;jaxrs:server</span> <span class="na">id=</span><span class="s">&quot;helloServiceCXF&quot;</span> <span class="na">address=</span><span class="s">&quot;/helloService&quot;</span><span class="nt">&gt;</span><span class="c">&lt;!-- exposes the service at the address &lt;server&gt;/cxf/helloService/&lt;Path&gt;--&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;jaxrs:serviceBeans&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;ref</span> <span class="na">component-id=</span><span class="s">&quot;helloServiceJaxRs&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- referenced blueprint bean to expose --&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;/jaxrs:serviceBeans&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;jaxrs:providers&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;ref</span> <span class="na">component-id=</span><span class="s">&quot;jaxbProvider&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;validationException&quot;</span>
+</span><span class='line'>				<span class="na">class=</span><span class="s">&quot;helpers.cxf.exception.handling.jaxrs.mapper.ExceptionXmlMapper&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- validation exception post processor --&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;/jaxrs:providers&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/jaxrs:server&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;cxf:bus&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;cxf:features&gt;</span>
+</span><span class='line'>			<span class="nt">&lt;cxf:logging</span> <span class="nt">/&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;/cxf:features&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/cxf:bus&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+Or <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJaxRS.java" target="_blank">via annotations</a>:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Eager</span>
+</span><span class='line'><span class="nd">@CXFEndpoint</span><span class="o">(</span><span class="n">url</span><span class="o">=</span><span class="s">&quot;/helloService&quot;</span><span class="o">,</span> <span class="n">providersClasses</span><span class="o">=</span> <span class="o">{</span><span class="n">JAXBElementProvider</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">JSONProvider</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">ExceptionXmlMapper</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloServiceJaxRS</span> <span class="kd">implements</span> <span class="n">net</span><span class="o">.</span><span class="na">osgiliath</span><span class="o">.</span><span class="na">hello</span><span class="o">.</span><span class="na">business</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">HelloServiceJaxRS</span> <span class="o">{...</span>
+</span></code></pre></td></tr></table></div></figure>
+</article>
+<article>
+<header>
+<H1>Messaging</H1>
+</header>
+You can also consume or produce asynchronous messages.
+In order to do this references jms factory on your blueprint context and exposes it with camel:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;jms&quot;</span> <span class="na">interface=</span><span class="s">&quot;org.apache.camel.Component&quot;</span>
+</span><span class='line'>		<span class="na">availability=</span><span class="s">&quot;mandatory&quot;</span> <span class="na">filter=</span><span class="s">&quot;(component-type=jms)&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/reference&gt;</span>
+</span><span class='line'><span class="nt">&lt;camel:camelContext</span> <span class="na">id=</span><span class="s">&quot;camelCtx&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/camel:camelContext&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+You can now consume queued messages and send to with the JMS template (take care, with CDI, @Consume doesn&#8217;t work, so you have to make <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJMS.java" target="_blank">a consumer route</a>):
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>@Setter
+</span><span class='line'>	@Produce(uri = &quot;jms:queue:helloServiceQueueOut&quot;)
+</span><span class='line'>	private ProducerTemplate producer;
+</span><span class='line'>@Consume(uri = &quot;jms:queue:helloServiceQueueIn&quot;)
+</span><span class='line'>	public void persistHello(@Body HelloObject helloObject_p) {
+</span><span class='line'>producer.sendBody(helloObject_p);
+</span><span class='line'>}
+</span></code></pre></td></tr></table></div></figure>
+</article>
+<article>
+<header>
+<H1>Validation</H1>
+</header>
+You can use JSR303 bean validation to validate your fields.
+
+<a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">Reference the Validator Factory on the blueprint file and inject it in your beans</a>:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;validatorFactory&quot;</span> <span class="na">interface=</span><span class="s">&quot;javax.validation.ValidatorFactory&quot;</span>
+</span><span class='line'>		<span class="na">availability=</span><span class="s">&quot;mandatory&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;validator&quot;</span>
+</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;org.springframework.validation.beanvalidation.LocalValidatorFactoryBean&quot;</span>
+</span><span class='line'>		<span class="na">factory-ref=</span><span class="s">&quot;validatorFactory&quot;</span> <span class="na">factory-method=</span><span class="s">&quot;getValidator&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJMS&quot;</span>
+</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJMS&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;validator&quot;</span> <span class="na">ref=</span><span class="s">&quot;validator&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/bean&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+Then, <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.model/net.osgiliath.hello.model.jpa/src/main/java/net/osgiliath/hello/model/jpa/model/HelloObject.java" target="_blank">annotate your model classes</a> with some contraints:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Data</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloObject</span> <span class="o">{</span>
+</span><span class='line'>	<span class="nd">@NotNull</span>
+</span><span class='line'>	<span class="kd">private</span> <span class="n">String</span> <span class="n">message</span><span class="o">;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+Finally, use the injected validator to validate your instances:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Set</span><span class="o">&lt;</span><span class="n">ConstraintViolation</span><span class="o">&lt;</span><span class="n">HelloObject</span><span class="o">&gt;&gt;</span> <span class="n">validationResults</span> <span class="o">=</span> <span class="n">validator</span>
+</span><span class='line'>				<span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="n">helloObject_p</span><span class="o">);</span>
+</span><span class='line'>		<span class="n">String</span> <span class="n">errors</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+</span><span class='line'>		<span class="k">if</span> <span class="o">(!</span><span class="n">validationResults</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{....}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+You can also <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/conf/CDIValidator.java" target="_blank">bootstrap validator factory</a> via CDI and reference the interceptor in your <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/resources/META-INF/beans.xml" target="_blank">beans.xml</a> to have validation
+</article>
+<article>
+<header>
+<H1>Integration testing</H1>
+</header>
+I will pass through the unit testing case (you can use Mockito&#8230;) to jump to the integration tests part.
+
+First, you have to define an integration test feature on the feature module (available from the parent archetype) referencing all the underlying dependencies:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">&quot;mybundle.business.impl.itests&quot;</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>				<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&#39;${osgiliath.framework.maven.version}&#39;</span><span class="nt">&gt;</span>osgiliath-business<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&#39;${project.version}&#39;</span><span class="nt">&gt;</span>mybundle.model<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;bundle&gt;</span>mvn:${project.parent.groupId}/mybundle.business.spi/${project.version}/jar<span class="nt">&lt;/bundle&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/feature&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+You can now make your integration test prefixing it by IT<test class name> (failsafe convention).
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@RunWith</span><span class="o">(</span><span class="n">PaxExam</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span><span class='line'><span class="nd">@ExamReactorStrategy</span><span class="o">(</span><span class="n">PerClass</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ITHelloServiceJaxRS</span> <span class="kd">extends</span> <span class="n">AbstractKarafPaxExamConfiguration</span> <span class="o">{</span>
+</span><span class='line'><span class="nd">@Inject</span><span class="c1">//Waiting for the OSGI service before starting the tests</span>
+</span><span class='line'>	<span class="nd">@Filter</span><span class="o">(</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">40000</span><span class="o">)</span>
+</span><span class='line'>	<span class="kd">private</span> <span class="n">HelloService</span> <span class="n">helloService</span><span class="o">;</span>
+</span><span class='line'><span class="nd">@Test</span>
+</span><span class='line'>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSayHello</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+</span><span class='line'><span class="n">helloService</span><span class="o">.</span><span class="na">sayHello</span><span class="o">(</span><span class="s">&quot;bob&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="o">}}</span>
+</span></code></pre></td></tr></table></div></figure>
+</article>
+</article>
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-22T18:48:00+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://OsgiliathEnterprise.github.io/projects/documentation/business-archetype.html" data-via="Tcharl" data-counturl="http://OsgiliathEnterprise.github.io/projects/documentation/business-archetype.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="small"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/net.osgiliath.parent/blog/2014/06/22/changelogs/">Changelogs</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/OsgiliathEnterprise">@OsgiliathEnterprise</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'OsgiliathEnterprise',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/net.osgiliath.parent/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+CharlieMordant?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Charlie Mordant -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'osgiliathenterprise';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://OsgiliathEnterprise.github.io/projects/documentation/business-archetype.html';
+        var disqus_url = 'http://OsgiliathEnterprise.github.io/projects/documentation/business-archetype.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
