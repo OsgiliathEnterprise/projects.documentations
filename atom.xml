@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Osgiliath Enterprise framework]]></title>
-  <link href="http://OsgiliathEnterprise.github.io/atom.xml" rel="self"/>
-  <link href="http://OsgiliathEnterprise.github.io/"/>
-  <updated>2014-11-10T15:03:41+01:00</updated>
-  <id>http://OsgiliathEnterprise.github.io/</id>
+  <link href="http://osgiliathEnterprise.github.io/atom.xml" rel="self"/>
+  <link href="http://osgiliathEnterprise.github.io/"/>
+  <updated>2014-11-10T15:08:19+01:00</updated>
+  <id>http://osgiliathEnterprise.github.io/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Changelogs]]></title>
-    <link href="http://OsgiliathEnterprise.github.io/blog/2014/06/22/changelogs/"/>
+    <link href="http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs/"/>
     <updated>2014-06-22T19:00:13+02:00</updated>
-    <id>http://OsgiliathEnterprise.github.io/blog/2014/06/22/changelogs</id>
+    <id>http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs</id>
     <content type="html"><![CDATA[<h3>0.0.7</h3>
 
 

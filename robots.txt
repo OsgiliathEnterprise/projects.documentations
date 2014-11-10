@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://OsgiliathEnterprise.github.io/sitemap.xml 
+Sitemap: http://osgiliathEnterprise.github.io/sitemap.xml 
