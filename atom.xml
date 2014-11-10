@@ -4,13 +4,12 @@
   <title><![CDATA[Osgiliath Enterprise framework]]></title>
   <link href="http://OsgiliathEnterprise.github.io/atom.xml" rel="self"/>
   <link href="http://OsgiliathEnterprise.github.io/"/>
-  <updated>2014-11-10T01:04:31+01:00</updated>
+  <updated>2014-11-10T01:27:55+01:00</updated>
   <id>http://OsgiliathEnterprise.github.io/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
     
   </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
@@ -19,6 +18,8 @@
     <updated>2014-06-22T19:00:13+02:00</updated>
     <id>http://OsgiliathEnterprise.github.io/blog/2014/06/22/changelogs</id>
     <content type="html"><![CDATA[<h3>0.0.7</h3>
+
+
 <ol>
 <li>Hawt IO managing support</li>
 <li>Swagger REST service querying with CDI modules</li>
@@ -29,14 +30,22 @@
 <li>Multiples dependencies versions updates (as well as Javascript ones)</li>
 <li>Updated Javadoc plugin to handle large projects</li>
 </ol>
-<h3>0.0.6</h3>
+
+
+<H3>0.0.6</H3>
+
+
 <ol>
 <li>Liquibase database versioning integration</li>
 <li>JaxRS 2.0 support</li>
 <li>Swagger API/ui REST queries integration (only with blueprint)</li>
 <li>Jaxb Xsd generation</li>
 </ol>
-<h3>0.0.5</h3>
+
+
+<H3>0.0.5</H3>
+
+
 <ol>
 <li>Selenium support</li>
 <li>Centralized Integration tests configuration</li>
@@ -44,25 +53,41 @@
 <li>Javadoc generation</li>
 <li>Travis CI integration</li>
 </ol>
-<h3>0.0.4</h3>
+
+
+<H3>0.0.4</H3>
+
+
 <ol>
 <li>CDI support for routes and business module</li>
 <li>Archetypes and samples stability</li>
 <li>Simplified usage in general</li>
 </ol>
-<h3>0.0.3</h3>
-<ol>	<li>No more package as path property (use the standard archetype package property)</li>
-	<li>Karaf 3.0.0.GA</li>
-	<li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
+
+
+<H3>0.0.3</H3>
+
+
+<ol>    <li>No more package as path property (use the standard archetype package property)</li>
+    <li>Karaf 3.0.0.GA</li>
+    <li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
 <li>CDI 1.1 support via Weld</li>
 </ol>
 
-<h3>0.0.2</h3>
 
-<ol>	<li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
-	<li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
-	<li>Removing some unused dependendencies</li>
+
+
+<H3>0.0.2</h3>
+
+
+
+
+<ol>    <li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
+    <li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
+    <li>Removing some unused dependendencies</li>
 </ol>
+
+
 
 ]]></content>
   </entry>
