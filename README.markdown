@@ -1,5 +1,11 @@
 ## What is Octopress?
 
+<<<<<<< HEAD
+=======
+Update remote content: rake generate, rake deploy
+Watch: rake preview 
+
+>>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 
 1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
