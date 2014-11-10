@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: changelogs | Osgiliath Enterprise framework]]></title>
+  <title><![CDATA[Category: Changelogs | Osgiliath Enterprise framework]]></title>
   <link href="http://OsgiliathEnterprise.github.io/blog/categories/changelogs/atom.xml" rel="self"/>
   <link href="http://OsgiliathEnterprise.github.io/"/>
-  <updated>2014-11-10T14:57:12+01:00</updated>
+  <updated>2014-11-10T15:01:01+01:00</updated>
   <id>http://OsgiliathEnterprise.github.io/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
