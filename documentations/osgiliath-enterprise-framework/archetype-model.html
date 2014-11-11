@@ -146,7 +146,7 @@ It&#8217;s purpose is to make the database access available, it can also exposes
 It&#8217;s composed of two modules: a database one and a model one.
 <article>
 <header>
-<H2>Database module</H2>
+<H2 id="database">Database module</H2>
 </header>
 Here you can specify your database access configuration and expose the connections as OSGI services that will be consumed by the model module.
 
@@ -185,29 +185,22 @@ Here&#8217;s how to declare a datasource bean:
 
 
  Here&#8217;s how to expose the database as a service without transaction support:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;service</span> <span class="na">ref=</span><span class="s">&quot;dataSource&quot;</span> <span class="na">interface=</span><span class="s">&quot;javax.sql.DataSource&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;service-properties&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;osgi.jndi.service.name&quot;</span> <span class="na">value=</span><span class="s">&quot;jdbc/myDatabaseConnection&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/service-properties&gt;</span>
-</span><span class='line'><span class="nt">&lt;/service&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+    <div><script src='https://gist.github.com/375819345e1b7d6217f0.js'></script>
+<noscript><pre><code>&lt;service ref=&quot;dataSource&quot; interface=&quot;javax.sql.DataSource&quot;&gt;
+		&lt;service-properties&gt;
+			&lt;entry key=&quot;osgi.jndi.service.name&quot; value=&quot;jdbc/${project.parent.artifactId}.database&quot; /&gt;
+		&lt;/service-properties&gt;
+	&lt;/service&gt;</code></pre></noscript></div>
+
 And with transactional support:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;service</span> <span class="na">ref=</span><span class="s">&quot;dataSource&quot;</span> <span class="na">interface=</span><span class="s">&quot;javax.sql.XADataSource&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;service-properties&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;osgi.jndi.service.name&quot;</span> <span class="na">value=</span><span class="s">&quot;jdbc/myXADatabaseConnection&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/service-properties&gt;</span>
-</span><span class='line'><span class="nt">&lt;/service&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+    <div><script src='https://gist.github.com/ed07aa38cebc41694d88.js'></script>
+<noscript><pre><code>&lt;service ref=&quot;dataSource&quot; interface=&quot;javax.sql.XADataSource&quot;&gt;
+		&lt;service-properties&gt;
+			&lt;entry key=&quot;osgi.jndi.service.name&quot; value=&quot;jdbc/${project.parent.artifactId}.database.xa&quot; /&gt;
+		&lt;/service-properties&gt;
+	&lt;/service&gt;</code></pre></noscript></div>
+
+
 
 Defining an other kind of datasource:
 
@@ -219,7 +212,7 @@ Finally change the dataSource bean declaration in the blueprint file.
 </article>
 <article>
 <header>
-<H2>JPA module</H2>
+<H2 id="jpa">JPA module</H2>
 </header>
 The model module is here to define your model objects (those which will be persisted) as well as the method for accessing them.
 
