@@ -143,7 +143,7 @@
       <div class="entry-content">
         <article>
 	<header>
-		<h1>Database versioning</h1>
+		<h1 id="liquibase">Database versioning</h1>
 	</header>
 	Osgiliath Enterprise Framework facilitate your database migration with
 	the help of <a href="http://www.liquibase.org/">Liquibase</a>
@@ -174,7 +174,7 @@
 	</article>
 	<article>
 		<header>
-			<h1>Querying all your REST services with Swagger</h1>
+			<h1 id="swagger">Querying all your REST services with Swagger</h1>
 		</header>
 		<p>If you installed the osgiliath-business feature, you&#8217;ll have
 			access to an administration console to query your web services.</p>
@@ -185,7 +185,16 @@
 		interface via http://&lt;yourhost&gt;:&lt;port&gt;/api-docs. On
 		Swagger UI, you finally have to reference your server URL (i.e.
 		http://localhost:8181/myServiceServer/api-docs).
+        Be sure to activate the osgiliath-swagger-rest feature in your main feature
 	</article>
+    <article>
+        <header><h1 id="hawtio">Monitoring with Hawtio</h1></header>
+        <p>
+            You can go to you server url/hawtio to have access to an administration console (usr/pwd karaf), you&#8217;ll be able to see your routes, queues, beans, stacks, bundles&#8230;
+            Be sure to activate the osgiliath-hawtio feature in your main feature
+        </p>
+    </article>
+
 </article>
 
       </div>

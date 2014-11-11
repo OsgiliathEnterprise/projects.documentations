@@ -149,7 +149,7 @@ These both frameworks have the goal to wire your beans together, but not the sam
 Note that the both framework can NOT reference other beans produced by the other framework in the same bundle (e.g. you can&#8217;t reference a cdi bean in blueprint and vice versa).
 <article>
 <header>
-<H1>Blueprint</H1>
+<H1 id="blueprint">Blueprint</H1>
 </header>
 Blueprint is the most known and stable bean wiring OSGI framework.
 It&#8217;s purpose is to wire beans together with the help of an xml descriptor located in src/main/resources/OSGI-INF/blueprint/[file].xml
@@ -180,7 +180,7 @@ All external classes referenced in a bp.xml file are not scanned by the bundle p
 </article>
 <article>
 <header>
-<H1>CDI</H1>
+<H1 id="cdi">CDI</H1>
 </header>
 CDI wires beans via annotations on classes, fields&#8230;
 As the code is concise and do not repeat (no need for xml), it can add burden on your java classes, making them less readable.
@@ -194,13 +194,13 @@ In order to enable a certain kind of annotations for your bundles, you&#8217;ve 
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>Require-Capability: osgi.extender;filter:=&quot;(osgi.extender=pax.cdi)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=pax-cdi-extension)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=validation)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=jaxrs-cdi)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=osgiliath-camel-cdi-extension)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=camel-configadmin-extension)&quot;,\
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=eager)&quot;
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>Require-Capability: osgi.extender;filter:=&quot;(osgi.extender=pax.cdi)&quot;,\ <span class="c">&lt;!-- Declaration to enable CDI on your project (you&#39;ll also need a bean.xml file)--&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=pax-cdi-extension)&quot;,\ <span class="c">&lt;!-- allow export and reference OSGI services with annotations --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=validation)&quot;,\ <span class="c">&lt;!-- Enables JSR 303 (validation) annotations scanning --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=jaxrs-cdi)&quot;,\ <span class="c">&lt;!-- Enables REST services declarations via annotations --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=deltaspike-core-api)&quot;,\ <span class="c">&lt;!-- DS is a nice angular stone for CDI --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=camel-cdi-extension)&quot;,\ <span class="c">&lt;!-- JMS annotations scanning --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=eager)&quot; <span class="c">&lt;!-- Enables Eager beans annotations, they&#39;ll start when bundle state will be &#39;Active&#39; --&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 In addition, you must have at least a beans.xml file located on src/main/resources/META-INF: this file can also refer to alternatives beans (for example while testing), or interceptors (something that wraps your methods adding some behaviour to it).
@@ -208,7 +208,7 @@ In addition, you must have at least a beans.xml file located on src/main/resourc
 <H2>Traps</H2>
 <ul>
 <li>Config admin properties that are referenced via annotations are not updated while changing, also you can tell from which persistent id the property come from: beware to not publish the same property twice.</li>
-<li>@Consume camel annotation cannot be used with CDI, you have to make a route to handle messages.</li>
+<li>@Consume camel annotation cannot be used with CDI, you have to make a route to handle messages (extends routebuilder).</li>
 <li>@ContextName camel annotation can only reference a &#8216;general&#8217; camel context, you can&#8217;t have many for a platform</li>
 <li>Jpa archetype cannot be CDI-driven as (for the time writing) only aries-jpa can handle persistence.</li>
 </ul>
