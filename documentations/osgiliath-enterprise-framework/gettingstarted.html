@@ -143,7 +143,7 @@
       <div class="entry-content">
         <article>
 <header>
-<H1>Prerequisite</H1>
+<H1 id="prerequisite">Prerequisite</H1>
 </header>
 You must have a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 1.6</a> or newer (JDK 8 is not supported for now) in order to compile.
 <a href="http://maven.apache.org/download.cgi">Maven 3.2.1 minimum</a> is used as a build tool.
@@ -198,22 +198,23 @@ Development has been tested on an Eclipse platform (but can be supported by othe
 </article>
 <article>
 <header>
-<H1>QuickStart</H1>
+<H1 id="very_quickstart">QuickStart</H1>
 </header>
-In eclipse go to new->Maven project and choose one of the net.osgiliath.archetype you want to work with (may be the parent one to begin, then others&#8230;).<module type> archetype on the archetype selection (take care of the &#8216;include snapshot&#8217; checkbox if you want to use Osgiliath SNAPSHOT archetypes).
+In eclipse go to new->Maven project and choose one of the net.osgiliath.archetype you want to work with (a parent first, then submodules&#8230;).<module type> archetype on the archetype selection (take care of the &#8216;include snapshot&#8217; checkbox if you want to use Osgiliath SNAPSHOT archetypes).
 
 To compile your project, right click on it->Run As-> Maven install.
 
 For UI module:
 You can use grunt at the root of your ui module instead of maven to interact within the build chain:
-grunt test: executes tests
+grunt test: executes unit tests
 grunt serve: runs a server for your ui with livereload enabled
 grunt build: same as running mvn clean install on the same module.
 </article>
 <article>
 <header>
-<H1>Framework list</H1>
+<H1 id="frameworks_list">Framework list</H1>
 </header>
+    Osgiliath is mainly an aggregation of well know Open source frameworks here&#8217;s a list of the main ones
 <ul>
 	<li><a href="http://projectlombok.org/">Lombok</a></li>
 	<li><a href="https://code.google.com/p/guava-libraries/wiki/GuavaExplained?tm=6">Guava</a></li>
@@ -232,7 +233,6 @@ grunt build: same as running mvn clean install on the same module.
 	<li><a href="http://docs.spring.io/spring-security/site/start-here.html">Spring-security</a></li>
 	<li><a href="http://camel.apache.org/book-getting-started.html">Apache Camel</a></li>
 	<li><a href="http://cxf.apache.org/docs/jax-rs.html">Cxf-JaxRS</a></li>
-
 	<li><a href="http://angularjs.org/">AngularJs</a></li>
 	<li><a href="http://getbootstrap.com/2.3.2/getting-started.html">Twitter bootstrap</a></li>
 	<li><a href="http://gruntjs.com/">Grunt</a></li>

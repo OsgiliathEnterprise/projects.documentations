@@ -170,10 +170,16 @@ A UI archetype where you can code your user interface with proven technologies.
 </article>
 <article>
 <header>
-<H1>Reference samples</H1>
+    <H1 id="reference_sample">Reference samples</H1>
 </header>
-A reference samples are available on github (or maven) at this adress: https://github.com/OsgiliathEnterprise/net.osgiliath.parent/tree/master/net.osgiliath.samples
-It consists of a simple webapp asking for an input an answering the same input. Its workflow starts from a <mark>Websocket</mark> <mark>JSON</mark> message that&#8217;s transformed to <mark>Xml</mark> <mark>REST</mark> one then <mark>validated</mark>, <mark>persisted</mark> on database, then resent to the client the same way. 
+A reference samples are available on github (or maven) at <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/tree/master/net.osgiliath.samples">this adress</a>
+<ul>
+    <li>The client listens to newly posted messages (<mark>Websocket</mark>)</li>
+    <li>It has an input allowing you to post message</li>
+    <li>The message is then sent in <mark>JSON</mark>, transformed in <mark>Xml</mark> and resent to a &#8216;business&#8217; <mark>REST</mark> web service</li>
+    <li>This business service <mark>validates</mark> it and save it in a <mark>database</mark></li>
+    <li>The answer is sent back in a route which is put back in the event queue</li>
+</ul>
 </article>
 </article>
       </div>

@@ -155,15 +155,35 @@ By default Derby databases are supported, but you can tweak it to support Oracle
 The database configuration file must be located in the src/main/resources/OSGI-INF/blueprint/&lt;whatever&gt;.xml
 
 Here&#8217;s how to declare a datasource bean:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;dataSource&quot;</span> <span class="na">class=</span><span class="s">&quot;org.apache.derby.jdbc.EmbeddedXADataSource&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;databaseName&quot;</span> <span class="na">value=</span><span class="s">&quot;myDatabase&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;createDatabase&quot;</span> <span class="na">value=</span><span class="s">&quot;create&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;/bean&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+<div><script src='https://gist.github.com/801d489902168369e2d1.js'></script>
+<noscript><pre><code>&lt;bean id=&quot;derbyServerIP&quot; class=&quot;java.net.InetAddress&quot;
+		factory-method=&quot;getByName&quot;&gt;
+		&lt;argument value=&quot;localhost&quot;&gt;&lt;/argument&gt;
+	&lt;/bean&gt;
+	&lt;bean id=&quot;derbyServer&quot; class=&quot;org.apache.derby.drda.NetworkServerControl&quot;
+		destroy-method=&quot;shutdown&quot;&gt;
+		&lt;argument ref=&quot;derbyServerIP&quot; /&gt;
+		&lt;argument value=&quot;$[database.port]&quot; /&gt;
+	&lt;/bean&gt;
+	&lt;bean id=&quot;pw&quot; class=&quot;java.io.PrintWriter&quot;&gt;
+		&lt;argument value=&quot;derbyServer.log&quot; /&gt;
+	&lt;/bean&gt;
+	&lt;bean id=&quot;derbyServerStarter&quot; class=&quot;net.osgiliath.database.starter.DatabaseStarter&quot;
+		depends-on=&quot;derbyServer&quot; init-method=&quot;init&quot;&gt;
+		&lt;property name=&quot;control&quot; ref=&quot;derbyServer&quot;&gt;&lt;/property&gt;
+		&lt;property name=&quot;writer&quot; ref=&quot;pw&quot;&gt;&lt;/property&gt;
+	&lt;/bean&gt;
+	&lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.derby.jdbc.ClientXADataSource&quot;
+		depends-on=&quot;derbyServerStarter&quot;&gt;
+		&lt;property name=&quot;user&quot; value=&quot;APP&quot;&gt;&lt;/property&gt;
+		&lt;property name=&quot;password&quot; value=&quot;APP&quot;&gt;&lt;/property&gt;
+		&lt;property name=&quot;databaseName&quot; value=&quot;${project.parent.artifactId}.database&quot; /&gt;
+		&lt;property name=&quot;createDatabase&quot; value=&quot;create&quot;&gt;&lt;/property&gt;
+		&lt;property name=&quot;serverName&quot; value=&quot;localhost&quot;&gt;&lt;/property&gt;
+		&lt;property name=&quot;portNumber&quot; value=&quot;$[database.port]&quot;&gt;&lt;/property&gt;
+	&lt;/bean&gt;</code></pre></noscript></div>
+
+
  Here&#8217;s how to expose the database as a service without transaction support:
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
