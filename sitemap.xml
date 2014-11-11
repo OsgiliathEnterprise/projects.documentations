@@ -13,119 +13,105 @@
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/administration.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/archetype-model.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/archetype-parent.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/business-archetype.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/business-bp-or-cdi.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/cookbooks.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/gettingstarted.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://osgiliathEnterprise.github.io/projects.documentations/posts/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://osgiliathEnterprise.github.io/projects.documentations/archives/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://osgiliathEnterprise.github.io/projects.documentations/blog/archives/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://osgiliathEnterprise.github.io/projects.documentations/blog/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
+    <loc>http://osgiliathEnterprise.github.io/projects.documentations/blog/archives/</loc>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://osgiliathEnterprise.github.io/projects.documentations/archives/</loc>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework/</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/overview.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/route-archetype.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html</loc>
-    <lastmod>2014-11-11T13:48:17+01:00</lastmod>
+    <lastmod>2014-11-11T14:08:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
