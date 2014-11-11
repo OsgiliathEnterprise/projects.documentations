@@ -9,11 +9,7 @@ ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
-<<<<<<< HEAD
-deploy_default = "rsync"
-=======
 deploy_default = "push"
->>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -179,11 +175,8 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-<<<<<<< HEAD
+
   rm_rf [Dir.glob(".pygments-cache/**"), Dir.glob(".gist-cache/**"), Dir.glob(".sass-cache/**"), "source/stylesheets/screen.css"]
-=======
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
->>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -260,7 +253,7 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do 
+  cd "#{deploy_dir}" do
     Bundler.with_clean_env { system "git pull" }
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
@@ -349,14 +342,9 @@ task :setup_github_pages, :repo do |t, args|
       end
     end
   end
-<<<<<<< HEAD
   url = blog_url(user, project)
   jekyll_config = IO.read('_config.yml')
   jekyll_config.sub!(/^url:.*$/, "url: #{url}")
-=======
-  jekyll_config = IO.read('_config.yml')
-  jekyll_config.sub!(/^url:.*$/, "url: #{blog_url(user, project)}")
->>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
   File.open('_config.yml', 'w') do |f|
     f.write jekyll_config
   end
@@ -405,11 +393,7 @@ def blog_url(user, project)
   url = if File.exists?('source/CNAME')
     "http://#{IO.read('source/CNAME').strip}"
   else
-<<<<<<< HEAD
     "http://#{user.downcase}.github.io"
-=======
-    "http://#{user}.github.io"
->>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
   end
   url += "/#{project}" unless project == ''
   url

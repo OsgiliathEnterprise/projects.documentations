@@ -1,0 +1,49 @@
+---
+layout: page
+title: "overview"
+date: 2014-06-22 18:22
+comments: true
+sharing: true
+footer: true
+---
+<article>
+The Osgiliath framework is composed of multiple features allowing you to develop faster, smoother and in a consistent way.
+You have access to multiple features:
+<ul>
+	<li> Database persistence with transaction management</li>
+	<li>Testable and smoother business code with out of the box functional programming, integration tests, shortened syntax, as well as messaging and http REST call at all levels.</li>
+	<li>Routing support allowing you to split; aggregate, transform your messages and redirect to the according services.</li>
+	<li>Ease deployment with hot swap support, multiple versions of the same bundle support, full application specification.</li>
+</ul>
+
+<article>
+<header>
+<H1 id="architecture">Architecture</H1>
+</header>
+Osgiliath is made of five archetypes (project skeleton):
+
+A parent project archetype in order to wrap a set of other modules and define a consistent set of bundle that make a feature (or an application).
+
+A model archetype defining your databases access, your model objects and daos (data access object to query, save or retrieve model objects from the database), it can also expose service (REST or JMS way).
+
+A business archetype dedicated to business stuff (security, complex operations...) and that exposes services synchronously or asynchronously.
+
+A route service where you can split, aggregate, transform your messages to transmit to the according ui/services.
+
+A UI archetype where you can code your user interface with proven technologies.
+{% img center /images/overview/moduleArchitecture.jpg 300 255 'Osgiliath Communication' 'Osgiliath communication'%}
+</article>
+<article>
+<header>
+    <H1 id="reference_sample">Reference samples</H1>
+</header>
+A reference samples are available on github (or maven) at <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/tree/master/net.osgiliath.samples">this adress</a>
+<ul>
+    <li>The client listens to newly posted messages (<mark>Websocket</mark>)</li>
+    <li>It has an input allowing you to post message</li>
+    <li>The message is then sent in <mark>JSON</mark>, transformed in <mark>Xml</mark> and resent to a 'business' <mark>REST</mark> web service</li>
+    <li>This business service <mark>validates</mark> it and save it in a <mark>database</mark></li>
+    <li>The answer is sent back in a route which is put back in the event queue</li>
+</ul>
+</article>
+</article>

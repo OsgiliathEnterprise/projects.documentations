@@ -4,7 +4,7 @@
 # Ported by Christian Neukirchen <mailto:chneukirchen@gmail.com>
 #   Copyright (C) 2004 Christian Neukirchen
 #
-# Incooporates ideas, comments and documentation by Chad Miller
+# Incooporates ideas, comments and osgiliath-enterprise-framework by Chad Miller
 #   Copyright (C) 2004 Chad Miller
 #
 # Original SmartyPants by John Gruber
@@ -91,7 +91,7 @@
 # == Authors
 #
 # John Gruber did all of the hard work of writing this software in
-# Perl for Movable Type and almost all of this useful documentation.
+# Perl for Movable Type and almost all of this useful osgiliath-enterprise-framework.
 # Chad Miller ported it to Python to use with Pyblosxom.
 #
 # Christian Neukirchen provided the Ruby port, as a general-purpose
@@ -115,7 +115,7 @@
 #
 # * Redistributions in binary form must reproduce the above copyright
 #   notice, this list of conditions and the following disclaimer in
-#   the documentation and/or other materials provided with the
+#   the osgiliath-enterprise-framework and/or other materials provided with the
 #   distribution.
 #
 # * Neither the name "SmartyPants" nor the names of its contributors
@@ -148,7 +148,7 @@
 #
 # * Redistributions in binary form must reproduce the above copyright
 #   notice, this list of conditions and the following disclaimer in
-#   the documentation and/or other materials provided with the
+#   the osgiliath-enterprise-framework and/or other materials provided with the
 #   distribution.
 #
 # This software is provided by the copyright holders and contributors
