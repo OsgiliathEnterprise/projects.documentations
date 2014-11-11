@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Osgiliath Enterprise Framework - Osgiliath Enterprise framework</title>
+  <title>Administration - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,15 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
-  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise framework" type="application/atom+xml">
+  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework">
-  <meta property="og:title" content="Osgiliath Enterprise Framework - Osgiliath Enterprise framework">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html">
+  <meta property="og:title" content="Administration - Osgiliath Enterprise">
   
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
@@ -61,7 +61,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/projects.documentations/">Osgiliath Enterprise framework</a>
+            <a class="navbar-brand" href="/projects.documentations/">Osgiliath Enterprise</a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -73,12 +73,12 @@
                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/projects.documentations/osgiliath-enterprise-framework">Osgiliath Framework</a>
+                            <a href="/projects.documentations/products/osgiliath-enterprise-framework">Osgiliath Framework</a>
                         </li>
                     </ul>
                 </li>
                 <li >
-                <a href="/projects.documentations/documentation">Documentation</a>
+                <a href="/projects.documentations/documentations/osgiliath-enterprise-framework">Documentation</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -125,116 +125,63 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T16:59:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:58:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
           
           
             <h1 class="entry-title">
-              Osgiliath Enterprise Framework
+              Administration
               
             </h1>
           
         </header>
       
       <div class="entry-content">
-        <p><article>
-Osgiliath entreprise framework is a flexible OpenSourced Java stack.</p>
-
-<p>If you&rsquo;re searching for the other Osgiliath project &ldquo;Osgiliath evolutionary framework&rdquo; from Pablo Garcia you&rsquo;re on the wrong site (<a href="http://osgiliath.org/">it&rsquo;s here</a>)</p>
-
-<p>It aims to fulfill common enterprise dilemmas and requirements at lesser effort.</p>
-
-<p>To summarize, Osgiliath allows you to code from the ui to the database in a clean modular and service oriented way.
-<article>
-<header></p>
-
-<H2>SOA everywhere</H2>
-
-
-<p></header>
-Osgiliath framework supports many servicing protocol, at all level of granularity:</p>
-
-<ul>
-    <li><a href="http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="REST" target="_blank">REST</a> and <a href="http://en.wikipedia.org/wiki/Java_Message_Service" title="JMS" target="_blank"></a> at a high granularity</li>
-    <li>Websocket for real time web communication between the browser and your servers</li>
-    <li>OSGI services for intra-JVM component communication for fine grained servicing</li>
-</ul>
-
-
-<p><img class="center" src="/projects.documentations/images/osgiliath-enterprise-framework/Osgiliath-communication.jpg" width="350" height="350" title="Osgiliath Architecture" alt="Osgiliath Architecture">
+        <article>
+	<header>
+		<h1>Database versioning</h1>
+	</header>
+	Osgiliath Enterprise Framework facilitate your database migration with
+	the help of <a href="http://www.liquibase.org/">Liquibase</a>
+	<article>
+		<header>
+			<h2>Usage</h2>
+		</header>
+		<p>As a reminder, the Model archetype is made of three module: a
+			super one that&#8217;s called model, a database one declaring your database
+			and a JPA one declaring your model tables/pojos.</p>
+		You first have to change the informations of your production database
+		by editing the pom of the model one.
+		<p>Then, after you&#8217;ve developed your model (manually editing jpa
+			entities) and want to update your production db execute &#8216;mvn clean
+			install -Pdb-data&#8217; to retrieve all data from the production database
+			on a changelog (the resulting xml changelog file will be located on
+			the database module).</p>
+		<p>Then, you&#8217;ve to retrieve the structural difference between your
+			local entities and the production database. Again, execute &#8216;mvn clean
+			install -Pdb-diff&#8217; on the JPA module to retrieve that structural diff
+			(again on an xml located in the database module).</p>
+		Then, you&#8217;ve to tweak your datas (the first generated changelog) to
+		map with your newer database structure if needed.
+		<p>Finally, edit the db-changelog.xml of the database module to
+			point to the two precedent xml files and deploy the new feature: your
+			database structure and datas will be updated corresponding to your
+			changes.</p>
+	</article>
+	<article>
+		<header>
+			<h1>Querying all your REST services with Swagger</h1>
+		</header>
+		<p>If you installed the osgiliath-business feature, you&#8217;ll have
+			access to an administration console to query your web services.</p>
+		First, you have to annotate your model element as well as your
+		services with <a href="https://helloreverb.com/developers/swagger">swagger</a>
+		annotations (<a
+			href="http://java.dzone.com/articles/swagger-make-developers-love">here is a useful tutorial</a>). You then will have access to the Swagger UI
+		interface via http://&lt;yourhost&gt;:&lt;port&gt;/api-docs. On
+		Swagger UI, you finally have to reference your server URL (i.e.
+		http://localhost:8181/myServiceServer/api-docs).
+	</article>
 </article>
-<article>
-<header></p>
-
-<H2>Uses of Enterprise integration patterns</H2>
-
-
-<p></header>
-With the help of <a href="http://camel.apache.org/eip.html" title="Apache Camel" target="_blank">Apache Camel</a> Osgiliath leveraged to a complete <a href="http://en.wikipedia.org/wiki/Enterprise_service_bus" title="Enterprise Service Bus" target="_blank">Enterprise Service Bus</a>
-<img class="center" src="/projects.documentations/images/osgiliath-enterprise-framework/Osgiliath-SOA-architecture.jpg" width="800" height="600" title="Osgiliath Modules" alt="Osgiliath module"></p>
-
-<p>With the helper OSGI bundle precept, you&rsquo;ll be able to deploy multiple versions of a product on a same JVM so ensuring the non-regression of your entire system.
-You&rsquo;ll also be able to hot deploy or undeploy every piece of software, or an entire application in a click, leading to a no outage, always on the wire system.
-</article>
-<article>
-<header></p>
-
-<H1>Testable at each levels, CI ready</H1>
-
-
-<p></header>
-Test driven development and continuous deployment ready, each parts of the framework are testable with unit or end to end tests.
-As an addition, each kind of tests outputs metrics that are interpretable by quality tools like Sonarqube.
-</article>
-<article>
-<header></p>
-
-<H1>Based on standards and cutting edge technologies</H1>
-
-
-<p></header></p>
-
-<p>When possible, capabilities are provided by Java standards (JSRs or OSGIRS&hellip;) or de-facto ones: Bean Validation 1.1, JMS 2, JaxRS 2, JPA 2, JTA 1.1, JMX, JaxB, JsonP, Blueprint services, DI, CDI 1.1, Servlet 3, AngularJS
-</article>
-<article>
-<header></p>
-
-<H2>On the cutting edge</H2>
-
-
-<p></header>
-Developers will gain in productivity and be happy to work with Osgiliath framework with the help of fashionable frameworks they love:
-Functional programing with Guava.
-Boilerplate code reduction with Lombok
-AngularJS and Twitter Bootstrap (Yeoman) framework for UI programming
-</article>
-<article>
-<header></p>
-
-<H1>You already know it</H1>
-
-
-<p></header>
-By this subtle combination of well-known frameworks developers are already familiar to Osgiliath.
-</article>
-<article>
-<header></p>
-
-<H2>Easy to use</h2>
-
-
-<p></header>
-Finally, a fully featured (Maven) build chain and project skeletton generation will considerably reduce the amount of work needed to make these things alive (for example OSGI is sometimes considered as an over engineering stuff, but the use of multiple simplifications will helps you to drastically reduce this overhead). <br/>
-</article>
-<article>
-<header></p>
-
-<H2>Opened</H2>
-
-
-<p></header>
-Osgiliath framework is mainly an aggregation of existing well known open source libraries, and is also Apache licensed: if something does not fit to your needs, one can always clone the project on Github and make your customization.
-</article>
-</article></p>
 
       </div>
       
@@ -254,13 +201,13 @@ Osgiliath framework is mainly an aggregation of existing well known open source 
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T16:59:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:58:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
             
           </p>
           
             <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework/index.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework/index.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -373,8 +320,8 @@ Osgiliath framework is mainly an aggregation of existing well known open source 
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework/index.html';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/osgiliath-enterprise-framework/index.html';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html';
         var disqus_script = 'embed.js';
       
     (function () {

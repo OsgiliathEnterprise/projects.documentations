@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>UI Archetype - Osgiliath Enterprise framework</title>
+  <title>Blueprint or CDI - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,15 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
-  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise framework" type="application/atom+xml">
+  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html">
-  <meta property="og:title" content="UI Archetype - Osgiliath Enterprise framework">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
+  <meta property="og:title" content="Blueprint or CDI - Osgiliath Enterprise">
   
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
@@ -61,7 +61,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/projects.documentations/">Osgiliath Enterprise framework</a>
+            <a class="navbar-brand" href="/projects.documentations/">Osgiliath Enterprise</a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -73,12 +73,12 @@
                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/projects.documentations/osgiliath-enterprise-framework">Osgiliath Framework</a>
+                            <a href="/projects.documentations/products/osgiliath-enterprise-framework">Osgiliath Framework</a>
                         </li>
                     </ul>
                 </li>
                 <li >
-                <a href="/projects.documentations/documentation">Documentation</a>
+                <a href="/projects.documentations/documentations/osgiliath-enterprise-framework">Documentation</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -125,11 +125,11 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:56:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:44:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
           
           
             <h1 class="entry-title">
-              UI Archetype
+              Blueprint or CDI
               
             </h1>
           
@@ -137,14 +137,77 @@
       
       <div class="entry-content">
         <article>
+Both business and routes archetypes are declined in two versions: a blueprint one and an xml one.
+
+These both frameworks have the goal to wire your beans together, but not the same way.
+
+Note that the both framework can NOT reference other beans produced by the other framework in the same bundle (e.g. you can&#8217;t reference a cdi bean in blueprint and vice versa).
+<article>
 <header>
-<H1>The UI framework</H1>
+<H1>Blueprint</H1>
 </header>
-The UI framework is mainly base on the Yeoman framework so I encourage you to see this <a href="http://www.youtube.com/watch?v=iUQ1fvdO9GY">video</a>
+Blueprint is the most known and stable bean wiring OSGI framework.
+It&#8217;s purpose is to wire beans together with the help of an xml descriptor located in src/main/resources/OSGI-INF/blueprint/[file].xml
 
-The addition is that you can use maven (mvn clean install) on it :) and that it contains a websocket service (that will be catched by JMS and so the routes or business modules).
+For example, if you want to inject a validator on one service like this:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloServiceJaxRS</span> <span class="kd">implements</span> <span class="n">net</span><span class="o">.</span><span class="na">osgiliath</span><span class="o">.</span><span class="na">hello</span><span class="o">.</span><span class="na">business</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">HelloServiceJaxRS</span> <span class="o">{</span>
+</span><span class='line'>	<span class="nd">@Setter</span>
+</span><span class='line'>	<span class="kd">private</span> <span class="n">HelloObjectRepository</span> <span class="n">helloObjectRepository</span><span class="o">;...</span>
+</span></code></pre></td></tr></table></div></figure>
+You will have a counterpart in the xml file:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJaxRs&quot;</span>
+</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJaxRS&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;helloObjectRepository&quot;</span> <span class="na">ref=</span><span class="s">&quot;helloObjectRepository&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;/bean&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-Note that when you&#8217;ll run the bundle in Karaf, the context url will be equal to the WebApp-Context and Web-ContextPath section of the osgi.bnd file.
+With blueprint, you can also reference properties (compendium), some custom namespaces (for example aries-jpa, aries-tx) or OSGI service.
+
+<h2>Traps</h2>
+All external classes referenced in a bp.xml file are not scanned by the bundle plugin so they&#8217;re package-import are not added to the MANIFEST of your bundle, you&#8217;ll have to add them manually in the osgi.bnd file
+</article>
+<article>
+<header>
+<H1>CDI</H1>
+</header>
+CDI wires beans via annotations on classes, fields&#8230;
+As the code is concise and do not repeat (no need for xml), it can add burden on your java classes, making them less readable.
+
+In order to enable a certain kind of annotations for your bundles, you&#8217;ve to add a Require-Capability header on your osgi.bnd file
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>Require-Capability: osgi.extender;filter:=&quot;(osgi.extender=pax.cdi)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=pax-cdi-extension)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=validation)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=jaxrs-cdi)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=osgiliath-camel-cdi-extension)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=camel-configadmin-extension)&quot;,\
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=eager)&quot;
+</span></code></pre></td></tr></table></div></figure>
+
+In addition, you must have at least a beans.xml file located on src/main/resources/META-INF: this file can also refer to alternatives beans (for example while testing), or interceptors (something that wraps your methods adding some behaviour to it).
+
+<H2>Traps</H2>
+<ul>
+<li>Config admin properties that are referenced via annotations are not updated while changing, also you can tell from which persistent id the property come from: beware to not publish the same property twice.</li>
+<li>@Consume camel annotation cannot be used with CDI, you have to make a route to handle messages.</li>
+<li>@ContextName camel annotation can only reference a &#8216;general&#8217; camel context, you can&#8217;t have many for a platform</li>
+<li>Jpa archetype cannot be CDI-driven as (for the time writing) only aries-jpa can handle persistence.</li>
+</ul>
+</article>
 </article>
       </div>
       
@@ -164,13 +227,13 @@ Note that when you&#8217;ll run the bundle in Karaf, the context url will be equ
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:56:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:44:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
             
           </p>
           
             <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -283,8 +346,8 @@ Note that when you&#8217;ll run the bundle in Karaf, the context url will be equ
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentation/ui-archetype.html';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
         var disqus_script = 'embed.js';
       
     (function () {

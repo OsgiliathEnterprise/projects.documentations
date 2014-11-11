@@ -218,7 +218,7 @@ var swfobject = function() {
 
 	return {
 		/* Public API
-			- Reference: http://code.google.com/p/swfobject/wiki/documentation
+			- Reference: http://code.google.com/p/swfobject/wiki/osgiliath-enterprise-framework
 		*/
 
 		embedSWF: function(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, flashvarsObj, parObj, attObj, callbackFn) {
