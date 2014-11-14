@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .bundle
 .DS_Store
 .sass-cache
@@ -9,11 +8,9 @@ public
 sass.old
 source.old
 source/_stash
-source/stylesheets/screen.css
 vendor
 node_modules
 Gemfile.lock
-=======
 *.gem
 *.rbc
 /.config
@@ -48,4 +45,3 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
->>>>>>> 2523a513369dc444efade97a1c5cc3bbc1fb80a7
