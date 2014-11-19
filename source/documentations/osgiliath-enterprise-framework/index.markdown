@@ -73,16 +73,31 @@ footer: true
 	<li>AngularJS primer</li>
 </ul>
 <H2>
-	<a href="cookbooks.html">Cookbooks</a>
-</H2>
-<ul>
-	<li>Code snippets of all that has been seen before</li>
-</ul>
-<H2>
 	<a href="administration.html">Administration</a>
 </H2>
 <ul>
 	<li><a href="administration.html#liquibase" target="_blank">Database versioning with Liquibase</a></li>
 	<li><a href="administration.html#swagger" target="_blank">REST service query interface with Swagger</a></li>
 	<li><a href="administration.html#hawtio" target="_blank">Monitoring with Hawtio</a></li>
+</ul>
+<H2>
+	<a href="cookbooks.html">Cookbooks</a>
+</H2>
+<ul>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.cdi/readme.html" target="_blank">Using context dependency injection</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.validation/readme.html" target="_blank">Validating beans using standard annotations (with blueprint)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.validation.cdi/readme.html" target="_blank">Validating beans using standard annotations (with CDI)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jpa/readme.html" target="_blank">Using the standard Java persistence API to persist in a database</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.database/readme.html" target="_blank">Declaring a database</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jaxrs/readme.html" target="_blank">Exposing a REST webservice (blueprint)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jaxrs.cdi/readme.html" target="_blank">Exposing a REST webservice (CDI)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jaxrs.messaging/readme.html" target="_blank">Sending and receiving asynchronous messages (blueprint)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jaxrs.messaging.cdi/readme.html" target="_blank">Sending and receiving asynchronous messages (CDI)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.jaxrs.messaging.security/readme.html" target="_blank">Configuring authentication and autorization</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/readme.html" target="_blank">Mixing messages, REST and validation (blueprint)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/readme.html" target="_blank">Mixing messages, REST and validation (CDI)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.model/net.osgiliath.hello.model.jpa/readme.html" target="_blank">Persistence and XML serialization</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.routes/net.osgiliath.hello.routes.blueprint/readme.html" target="_blank">Aggregating, transforming and sending message using routes (blueprint)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.routes/net.osgiliath.hello.routes.cdi/readme.html" target="_blank">Aggregating, transforming and sending message using routes (CDI)</a></li>
+	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.ui/readme.html" target="_blank">Making an AngularJs website UI</a></li>
 </ul>
