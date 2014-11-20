@@ -2,129 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/.gitkeeper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_deploy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/coderwall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/delicious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/dp.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/flickr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/github.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_17_linked_in.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_21_github.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_31_twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_39_e-mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/home.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/linkedin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/loading_gray.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/loading_pacman.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.themes/octostrap3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/pinboard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/pinterest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/rss.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_archive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_article.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/_asides.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/_before_header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_breadcrumbs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_button-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_color.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_color.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_comment.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_component-animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_fancybox.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_fancybox_fix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_flickr.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_font.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_footnote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/asides/_github.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_glyphicons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/asides/_googleplus.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_header.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_index.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_input-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_jumbotron.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_navs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_pager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/_parts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/_plugins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_popovers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_post.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_progress-bars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_responsive-utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_scaffolding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_syntax.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_syntax.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_syntax.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_thumbnails.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_wells.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/asides/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/article_listing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/banner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/asides/book.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/stylesheets/base/bootstrap/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/end_footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/facebook.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/fancybox_head.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/google-plus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/hero.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/home_landing_row.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/hyphenator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/archives/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/jquery-2.0.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/jquery-2.0.3.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/jquery.fancybox.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/slash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/twitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="$PROJECT_DIR$/public/atom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/blog/categories/changelogs/atom.xml" afterPath="$PROJECT_DIR$/public/blog/categories/changelogs/atom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/index.html" afterPath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
     </list>
     <ignored path="projects.documentations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,23 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.markdown" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.markdown" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.555555" vertical-offset="978" max-vertical-offset="1650">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="1650">
               <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
+          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1396648" vertical-offset="0" max-vertical-offset="537">
+            <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="300">
               <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
@@ -266,6 +147,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="osgiliath-enterprise-framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,7 +334,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -775,23 +692,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.555555" vertical-offset="978" max-vertical-offset="1650">
+        <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="1650">
           <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1396648" vertical-offset="0" max-vertical-offset="537">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>
