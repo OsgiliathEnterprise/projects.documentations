@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/.gitkeeper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_deploy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/coderwall.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/delicious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/dp.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/flickr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/github.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_17_linked_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_21_github.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_31_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/glyphicons_social_39_e-mail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/google.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/linkedin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/loading_gray.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/loading_pacman.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.themes/octostrap3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/pinboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/pinterest.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/social/twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/MIT-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_archive.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_article.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/_asides.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_badges.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/_before_header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_bootstrap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_breadcrumbs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_button-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_carousel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_close.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_code.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_color.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_color.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_comment.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_component-animations.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_dropdowns.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_fancybox.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_fancybox_fix.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/plugins/_flickr.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_font.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_footer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_footnote.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/asides/_github.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_glyphicons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/partials/asides/_googleplus.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_header.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_index.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_input-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_jumbotron.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_labels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_main.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_media.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_navbar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_navs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_normalize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_pager.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_pagination.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_panels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/_parts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/_plugins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_popovers.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_post.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_print.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_progress-bars.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_responsive-utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_scaffolding.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/_syntax.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_syntax.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/parts/_syntax.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_tables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_thumbnails.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_tooltip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_type.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/custom/_typography.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/_wells.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/asides/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/article_listing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/asides/book.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/stylesheets/base/bootstrap/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/base/bootstrap/bootstrap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/end_footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/facebook.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/fancybox_head.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/google-plus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/hero.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/custom/home_landing_row.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/hyphenator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/archives/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/jquery-2.0.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/libs/jquery/jquery-2.0.3.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/jquery.fancybox.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/javascripts/slash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/_includes/social/twitter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    </list>
+    <ignored path="projects.documentations.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="projects.documentations" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.markdown" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.555555" vertical-offset="978" max-vertical-offset="1650">
+              <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1396648" vertical-offset="0" max-vertical-offset="537">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="administration.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="business-archetype.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+              <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/source/_layouts/category_index.html" />
+        <option value="$PROJECT_DIR$/config.rb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_includes/custom/navigation.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/overview.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/gettingstarted.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-parent.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-model.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/route-archetype.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/ui-archetype.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects.documentations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/documentations" />
+      <recent name="$PROJECT_DIR$/source/products" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="" />
+      <created>1415576607687</created>
+      <updated>1415576607687</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287827" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+          <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84729064" vertical-offset="344" max-vertical-offset="750">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_deploy/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.36674815" vertical-offset="150" max-vertical-offset="4350">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/asides/github.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="34.703705" vertical-offset="937" max-vertical-offset="1320">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/archives/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="423">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="446">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/custom/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="423">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/custom/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="446">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/post/categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/custom/hero.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/post/author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="481">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/atom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/facebook_like.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/social/facebook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="446">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5699" max-vertical-offset="6180">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="433">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_layouts/category_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="446">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.208334" vertical-offset="413" max-vertical-offset="870">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031914894" vertical-offset="0" max-vertical-offset="470">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="1635">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_includes/custom/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.003717472" vertical-offset="452" max-vertical-offset="990">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875" vertical-offset="285" max-vertical-offset="810">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/gettingstarted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14285715" vertical-offset="1080" max-vertical-offset="1650">
+          <caret line="77" column="105" selection-start-line="77" selection-start-column="105" selection-end-line="77" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-parent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.625" vertical-offset="36" max-vertical-offset="615">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="26.25" vertical-offset="1185" max-vertical-offset="1710">
+          <caret line="37" column="173" selection-start-line="37" selection-start-column="173" selection-end-line="37" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="315" max-vertical-offset="1125">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/route-archetype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="855">
+          <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+          <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/ui-archetype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="435">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.555555" vertical-offset="978" max-vertical-offset="1650">
+          <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1396648" vertical-offset="0" max-vertical-offset="537">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
