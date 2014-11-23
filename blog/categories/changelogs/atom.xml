@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Changelogs | Osgiliath Enterprise]]></title>
+  <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/categories/changelogs/atom.xml" rel="self"/>
+  <link href="http://osgiliathEnterprise.github.io/projects.documentations/"/>
+  <updated>2014-11-20T20:02:20+01:00</updated>
+  <id>http://osgiliathEnterprise.github.io/projects.documentations/</id>
+  <author>
+    <name><![CDATA[Charlie Mordant]]></name>
+    <email><![CDATA[cmordant1@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changelogs]]></title>
+    <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/"/>
+    <updated>2014-06-22T19:00:13+02:00</updated>
+    <id>http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs</id>
+    <content type="html"><![CDATA[<h3>0.0.7</h3>
+
+
+<ol>
+<li>Hawt IO managing support</li>
+<li>Swagger REST service querying with CDI modules</li>
+<li>New Angular file layout</li>
+<li>Optional Scala programming support</li>
+<li>Bugfixes on REST exception mapper</li>
+<li>Sample now handles errors</li>
+<li>Multiples dependencies versions updates (as well as Javascript ones)</li>
+<li>Updated Javadoc plugin to handle large projects</li>
+</ol>
+
+
+<H3>0.0.6</H3>
+
+
+<ol>
+<li>Liquibase database versioning integration</li>
+<li>JaxRS 2.0 support</li>
+<li>Swagger API/ui REST queries integration (only with blueprint)</li>
+<li>Jaxb Xsd generation</li>
+</ol>
+
+
+<H3>0.0.5</H3>
+
+
+<ol>
+<li>Selenium support</li>
+<li>Centralized Integration tests configuration</li>
+<li>Code smell issues from Sonar</li>
+<li>Javadoc generation</li>
+<li>Travis CI integration</li>
+</ol>
+
+
+<H3>0.0.4</H3>
+
+
+<ol>
+<li>CDI support for routes and business module</li>
+<li>Archetypes and samples stability</li>
+<li>Simplified usage in general</li>
+</ol>
+
+
+<H3>0.0.3</H3>
+
+
+<ol>    <li>No more package as path property (use the standard archetype package property)</li>
+    <li>Karaf 3.0.0.GA</li>
+    <li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
+<li>CDI 1.1 support via Weld</li>
+</ol>
+
+
+
+
+<H3>0.0.2</h3>
+
+
+
+
+<ol>    <li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
+    <li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
+    <li>Removing some unused dependendencies</li>
+</ol>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

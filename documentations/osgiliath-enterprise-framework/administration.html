@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Osgiliath Enterprise</title>
+  <title>Administration - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,16 +14,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
   <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations">
-  <meta property="og:title" content="Osgiliath Enterprise">
-  <meta property="og:description" content="Your enterprise belong to us">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html">
+  <meta property="og:title" content="Administration - Osgiliath Enterprise">
+  
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
 
@@ -66,7 +66,7 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li >
                     <a rel="index" href="/projects.documentations/">Blog</a>
                 </li>
                 <li >
@@ -113,19 +113,11 @@
         <div id="content">
           <div class="row">
   <div class="page-content col-md-9">
-    <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="Osgiliath Enterprise" />
-    <meta itemprop="description" content="Your enterprise belong to us" />
-    <meta itemprop="url" content="http://osgiliathEnterprise.github.io/projects.documentations" />
+    <article role="article">
       
-      
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="page-header">
           
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
+            <p class="meta text-muted text-uppercase">
 
 
 
@@ -138,106 +130,118 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T19:00:13+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
-        
-      </p>
-    
-    
-      <h2 class="entry-title" itemprop="name headline"><a href="/projects.documentations/blog/2014/06/22/changelogs/" itemprop="url">Changelogs</a></h2>
-    
-  </header>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:58:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
+          
+          
+            <h1 class="entry-title">
+              Administration
+              
+            </h1>
+          
+        </header>
+      
+      <div class="entry-content">
+        <article>
+	<header>
+		<h1 id="liquibase">Database versioning</h1>
+	</header>
+	Osgiliath Enterprise Framework facilitate your database migration with
+	the help of <a href="http://www.liquibase.org/">Liquibase</a>
+	<article>
+		<header>
+			<h2>Usage</h2>
+		</header>
+		<p>As a reminder, the Model archetype is made of three module: a
+			super one that&#8217;s called model, a database one declaring your database
+			and a JPA one declaring your model tables/pojos.</p>
+		You first have to change the informations of your production database
+		by editing the pom of the model one.
+		<p>Then, after you&#8217;ve developed your model (manually editing jpa
+			entities) and want to update your production db execute &#8216;mvn clean
+			install -Pdb-data&#8217; to retrieve all data from the production database
+			on a changelog (the resulting xml changelog file will be located on
+			the database module).</p>
+		<p>Then, you&#8217;ve to retrieve the structural difference between your
+			local entities and the production database. Again, execute &#8216;mvn clean
+			install -Pdb-diff&#8217; on the JPA module to retrieve that structural diff
+			(again on an xml located in the database module).</p>
+		Then, you&#8217;ve to tweak your datas (the first generated changelog) to
+		map with your newer database structure if needed.
+		<p>Finally, edit the db-changelog.xml of the database module to
+			point to the two precedent xml files and deploy the new feature: your
+			database structure and datas will be updated corresponding to your
+			changes.</p>
+	</article>
+	<article>
+		<header>
+			<h1 id="swagger">Querying all your REST services with Swagger</h1>
+		</header>
+		<p>If you installed the osgiliath-business feature, you&#8217;ll have
+			access to an administration console to query your web services.</p>
+		First, you have to annotate your model element as well as your
+		services with <a href="https://helloreverb.com/developers/swagger">swagger</a>
+		annotations (<a
+			href="http://java.dzone.com/articles/swagger-make-developers-love">here is a useful tutorial</a>). You then will have access to the Swagger UI
+		interface via http://&lt;yourhost&gt;:&lt;port&gt;/api-docs. On
+		Swagger UI, you finally have to reference your server URL (i.e.
+		http://localhost:8181/myServiceServer/api-docs).
+        Be sure to activate the osgiliath-swagger-rest feature in your main feature
+	</article>
+    <article>
+        <header><h1 id="hawtio">Monitoring with Hawtio</h1></header>
+        <p>
+            You can go to you server url/hawtio to have access to an administration console (usr/pwd karaf), you&#8217;ll be able to see your routes, queues, beans, stacks, bundles&#8230;
+            Be sure to activate the osgiliath-hawtio feature in your main feature
+        </p>
+    </article>
 
+</article>
 
-  <div class="entry-content clearfix" itemprop="articleBody description"><h3>0.0.7</h3>
-
-
-<ol>
-<li>Hawt IO managing support</li>
-<li>Swagger REST service querying with CDI modules</li>
-<li>New Angular file layout</li>
-<li>Optional Scala programming support</li>
-<li>Bugfixes on REST exception mapper</li>
-<li>Sample now handles errors</li>
-<li>Multiples dependencies versions updates (as well as Javascript ones)</li>
-<li>Updated Javadoc plugin to handle large projects</li>
-</ol>
-
-
-<H3>0.0.6</H3>
-
-
-<ol>
-<li>Liquibase database versioning integration</li>
-<li>JaxRS 2.0 support</li>
-<li>Swagger API/ui REST queries integration (only with blueprint)</li>
-<li>Jaxb Xsd generation</li>
-</ol>
-
-
-<H3>0.0.5</H3>
-
-
-<ol>
-<li>Selenium support</li>
-<li>Centralized Integration tests configuration</li>
-<li>Code smell issues from Sonar</li>
-<li>Javadoc generation</li>
-<li>Travis CI integration</li>
-</ol>
-
-
-<H3>0.0.4</H3>
-
-
-<ol>
-<li>CDI support for routes and business module</li>
-<li>Archetypes and samples stability</li>
-<li>Simplified usage in general</li>
-</ol>
-
-
-<H3>0.0.3</H3>
-
-
-<ol>    <li>No more package as path property (use the standard archetype package property)</li>
-    <li>Karaf 3.0.0.GA</li>
-    <li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
-<li>CDI 1.1 support via Weld</li>
-</ol>
-
-
-
-
-<H3>0.0.2</h3>
-
-
-
-
-<ol>    <li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
-    <li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
-    <li>Removing some unused dependendencies</li>
-</ol>
+      </div>
+      
+        <footer>
+          <p class="meta text-muted">
+            
+            
 
 
 
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T18:58:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+            
+          </p>
+          
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="small"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
-
-        </article>
+          
+        </footer>
       
-    </div>
-
-    <ul class="pager">
-      
-        <li class="previous disabled"><a href="#">&larr;&nbsp;Older</a></li>
-      
-      <li><a href="/projects.documentations/blog/archives">Blog Archives</a></li>
-      
-        <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
-      
-    </ul>
+    </article>
+    
+      <section>
+        <h2>Comments</h2>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
   </div>
 
   
@@ -329,7 +333,10 @@
       var disqus_shortname = 'osgiliathenterprise';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/administration.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

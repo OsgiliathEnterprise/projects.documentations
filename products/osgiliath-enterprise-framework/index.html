@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Osgiliath Enterprise</title>
+  <title>Osgiliath Enterprise Framework - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,16 +14,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
   <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations">
-  <meta property="og:title" content="Osgiliath Enterprise">
-  <meta property="og:description" content="Your enterprise belong to us">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework">
+  <meta property="og:title" content="Osgiliath Enterprise Framework - Osgiliath Enterprise">
+  
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
 
@@ -66,7 +66,7 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li >
                     <a rel="index" href="/projects.documentations/">Blog</a>
                 </li>
                 <li >
@@ -113,19 +113,11 @@
         <div id="content">
           <div class="row">
   <div class="page-content col-md-9">
-    <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="Osgiliath Enterprise" />
-    <meta itemprop="description" content="Your enterprise belong to us" />
-    <meta itemprop="url" content="http://osgiliathEnterprise.github.io/projects.documentations" />
+    <article role="article">
       
-      
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="page-header">
           
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
+            <p class="meta text-muted text-uppercase">
 
 
 
@@ -138,106 +130,162 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T19:00:13+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
-        
-      </p>
-    
-    
-      <h2 class="entry-title" itemprop="name headline"><a href="/projects.documentations/blog/2014/06/22/changelogs/" itemprop="url">Changelogs</a></h2>
-    
-  </header>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T16:59:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
+          
+          
+            <h1 class="entry-title">
+              Osgiliath Enterprise Framework
+              
+            </h1>
+          
+        </header>
+      
+      <div class="entry-content">
+        <p><article>
+Osgiliath entreprise framework is a flexible OpenSourced Java stack.</p>
+
+<p>If you&rsquo;re searching for the other Osgiliath project &ldquo;Osgiliath evolutionary framework&rdquo; from Pablo Garcia you&rsquo;re on the wrong site (<a href="http://osgiliath.org/">it&rsquo;s here</a>)</p>
+
+<p>It aims to fulfill common enterprise dilemmas and requirements at lesser effort.</p>
+
+<p>To summarize, Osgiliath allows you to code from the ui to the database in a clean modular and service oriented way.
+<article>
+<header></p>
+
+<H2>SOA everywhere</H2>
 
 
-  <div class="entry-content clearfix" itemprop="articleBody description"><h3>0.0.7</h3>
+<p></header>
+Osgiliath framework supports many servicing protocol, at all level of granularity:</p>
+
+<ul>
+    <li><a href="http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="REST" target="_blank">REST</a> and <a href="http://en.wikipedia.org/wiki/Java_Message_Service" title="JMS" target="_blank"></a> at a high granularity</li>
+    <li>Websocket for real time web communication between the browser and your servers</li>
+    <li>OSGI services for intra-JVM component communication for fine grained servicing</li>
+</ul>
 
 
-<ol>
-<li>Hawt IO managing support</li>
-<li>Swagger REST service querying with CDI modules</li>
-<li>New Angular file layout</li>
-<li>Optional Scala programming support</li>
-<li>Bugfixes on REST exception mapper</li>
-<li>Sample now handles errors</li>
-<li>Multiples dependencies versions updates (as well as Javascript ones)</li>
-<li>Updated Javadoc plugin to handle large projects</li>
-</ol>
+<p><img class="center" src="/projects.documentations/images/osgiliath-enterprise-framework/Osgiliath-communication.jpg" width="350" height="350" title="Osgiliath Architecture" alt="Osgiliath Architecture">
+</article>
+<article>
+<header></p>
+
+<H2>Uses of Enterprise integration patterns</H2>
 
 
-<H3>0.0.6</H3>
+<p></header>
+With the help of <a href="http://camel.apache.org/eip.html" title="Apache Camel" target="_blank">Apache Camel</a> Osgiliath leveraged to a complete <a href="http://en.wikipedia.org/wiki/Enterprise_service_bus" title="Enterprise Service Bus" target="_blank">Enterprise Service Bus</a>
+<img class="center" src="/projects.documentations/images/osgiliath-enterprise-framework/Osgiliath-SOA-architecture.jpg" width="800" height="600" title="Osgiliath Modules" alt="Osgiliath module"></p>
+
+<p>With the helper OSGI bundle precept, you&rsquo;ll be able to deploy multiple versions of a product on a same JVM so ensuring the non-regression of your entire system.
+You&rsquo;ll also be able to hot deploy or undeploy every piece of software, or an entire application in a click, leading to a no outage, always on the wire system.
+</article>
+<article>
+<header></p>
+
+<H1>Testable at each levels, CI ready</H1>
 
 
-<ol>
-<li>Liquibase database versioning integration</li>
-<li>JaxRS 2.0 support</li>
-<li>Swagger API/ui REST queries integration (only with blueprint)</li>
-<li>Jaxb Xsd generation</li>
-</ol>
+<p></header>
+Test driven development and continuous deployment ready, each parts of the framework are testable with unit or end to end tests.
+As an addition, each kind of tests outputs metrics that are interpretable by quality tools like Sonarqube.
+</article>
+<article>
+<header></p>
+
+<H1>Based on standards and cutting edge technologies</H1>
 
 
-<H3>0.0.5</H3>
+<p></header></p>
+
+<p>When possible, capabilities are provided by Java standards (JSRs or OSGIRS&hellip;) or de-facto ones: Bean Validation 1.1, JMS 2, JaxRS 2, JPA 2, JTA 1.1, JMX, JaxB, JsonP, Blueprint services, DI, CDI 1.1, Servlet 3, AngularJS
+</article>
+<article>
+<header></p>
+
+<H2>On the cutting edge</H2>
 
 
-<ol>
-<li>Selenium support</li>
-<li>Centralized Integration tests configuration</li>
-<li>Code smell issues from Sonar</li>
-<li>Javadoc generation</li>
-<li>Travis CI integration</li>
-</ol>
+<p></header>
+Developers will gain in productivity and be happy to work with Osgiliath framework with the help of fashionable frameworks they love:
+Functional programing with Guava.
+Boilerplate code reduction with Lombok
+AngularJS and Twitter Bootstrap (Yeoman) framework for UI programming
+</article>
+<article>
+<header></p>
+
+<H1>You already know it</H1>
 
 
-<H3>0.0.4</H3>
+<p></header>
+By this subtle combination of well-known frameworks developers are already familiar to Osgiliath.
+</article>
+<article>
+<header></p>
+
+<H2>Easy to use</h2>
 
 
-<ol>
-<li>CDI support for routes and business module</li>
-<li>Archetypes and samples stability</li>
-<li>Simplified usage in general</li>
-</ol>
+<p></header>
+Finally, a fully featured (Maven) build chain and project skeletton generation will considerably reduce the amount of work needed to make these things alive (for example OSGI is sometimes considered as an over engineering stuff, but the use of multiple simplifications will helps you to drastically reduce this overhead). <br/>
+</article>
+<article>
+<header></p>
+
+<H2>Opened</H2>
 
 
-<H3>0.0.3</H3>
+<p></header>
+Osgiliath framework is mainly an aggregation of existing well known open source libraries, and is also Apache licensed: if something does not fit to your needs, one can always clone the project on Github and make your customization.
+</article>
+</article></p>
 
-
-<ol>    <li>No more package as path property (use the standard archetype package property)</li>
-    <li>Karaf 3.0.0.GA</li>
-    <li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
-<li>CDI 1.1 support via Weld</li>
-</ol>
-
-
-
-
-<H3>0.0.2</h3>
-
-
-
-
-<ol>    <li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
-    <li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
-    <li>Removing some unused dependendencies</li>
-</ol>
+      </div>
+      
+        <footer>
+          <p class="meta text-muted">
+            
+            
 
 
 
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T16:59:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+            
+          </p>
+          
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework/index.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework/index.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="small"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
-
-        </article>
+          
+        </footer>
       
-    </div>
-
-    <ul class="pager">
-      
-        <li class="previous disabled"><a href="#">&larr;&nbsp;Older</a></li>
-      
-      <li><a href="/projects.documentations/blog/archives">Blog Archives</a></li>
-      
-        <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
-      
-    </ul>
+    </article>
+    
+      <section>
+        <h2>Comments</h2>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
   </div>
 
   
@@ -329,7 +377,10 @@
       var disqus_shortname = 'osgiliathenterprise';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework/index.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/products/osgiliath-enterprise-framework/index.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
