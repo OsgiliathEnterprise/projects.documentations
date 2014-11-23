@@ -5,6 +5,16 @@ date: 2014-06-22 19:00:13 +0200
 comments: true
 categories: changelogs
 ---
+<h3>0.1.0</h3>
+<ol>
+<li>Completely rethought features architecture</li>
+<li>Maven site generation support</li>
+<li>Use of Spring-jms instead of Camel for blueprint business archetype</li>
+<li>Full integration in a CI environment</li>
+<li>Cookbooks added in the documentation</li>
+<li>JMS and Database transactions are now compatibles</li>
+<li>JCA based connection factory to avoid HawtIO unnamed connection factory errors</li>
+</ol>
 <h3>0.0.7</h3>
 <ol>
 <li>Hawt IO managing support</li>
