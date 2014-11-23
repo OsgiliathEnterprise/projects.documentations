@@ -2,13 +2,138 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="$PROJECT_DIR$/public/atom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/blog/categories/changelogs/atom.xml" afterPath="$PROJECT_DIR$/public/blog/categories/changelogs/atom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/index.html" afterPath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/archives/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/dist/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/blankButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/divider.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/fullscreenButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/fullscreenButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/muteButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/muteButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/normalscreenButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/normalscreenButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/pauseButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/pauseButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/playButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/playButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/timeSliderBuffer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/timeSliderCapLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/timeSliderCapRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/timeSliderProgress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/timeSliderRail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/unmuteButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/controlbar/unmuteButtonOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/display/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/display/bufferIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/display/muteIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/display/playIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/dock/button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/glow.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/item.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/itemOver.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/sliderCapBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/sliderCapTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/sliderRail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/playlist/sliderThumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/sharing/embedIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/sharing/embedScreen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/sharing/shareIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/glow/sharing/shareScreen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jwplayer/player.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/blog/2014/06/22/changelogs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/blog/archives/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/blog/categories/changelogs/atom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/blog/categories/changelogs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/administration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/archetype-model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/archetype-parent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/business-archetype.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/cookbooks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/gettingstarted.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/overview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/route-archetype.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/documentations/osgiliath-enterprise-framework/ui-archetype.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/font/LeagueGothic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/.gitkeeper" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/bird_32_gray.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/bird_32_gray_fail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/code_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/dotted-border.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/dp.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/email.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/glyphicons_social_17_linked_in.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/glyphicons_social_21_github.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/glyphicons_social_31_twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/glyphicons_social_39_e-mail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/home.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/line-tile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/loading_gray.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/loading_pacman.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/noise.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/osgiliath-enterprise-framework/Osgiliath-SOA-architecture.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/osgiliath-enterprise-framework/Osgiliath-communication.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/overview/moduleArchitecture.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/rss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/coderwall.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/delicious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/flickr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/github.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/google.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/linkedin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/pinboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/pinterest.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/rss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/social/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/ender.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/github.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/hyphenator.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/ender.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/jXHR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/jquery/MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/jquery/jquery-2.0.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/jquery/jquery-2.0.3.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/libs/swfobject-dynamic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/modernizr-2.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/octopress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/pinboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/slash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/twitter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/products/osgiliath-enterprise-framework/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/base/bootstrap/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.markdown" afterPath="$PROJECT_DIR$/README.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/net.osgiliath.parent.doc.iml" afterPath="$PROJECT_DIR$/.idea/net.osgiliath.parent.doc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projects.documentations.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,51 +151,7 @@
     <favorites_list name="projects.documentations" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.markdown" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="1650">
-              <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="administration.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="business-archetype.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
-              <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -81,32 +162,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/_layouts/category_index.html" />
-        <option value="$PROJECT_DIR$/config.rb" />
-        <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/source/_includes/custom/navigation.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/overview.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/gettingstarted.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-parent.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-model.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/route-archetype.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/ui-archetype.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html" />
-        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown" />
+        <option value="$PROJECT_DIR$/README.markdown" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -132,6 +202,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -150,83 +221,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="osgiliath-enterprise-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects.documentations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="editor.preferences.smartKeys" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -318,6 +323,14 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -328,8 +341,22 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="" />
       <created>1415576607687</created>
+      <option name="number" value="Default" />
       <updated>1415576607687</updated>
     </task>
+    <task id="LOCAL-00001" summary="0.1.0 changelog">
+      <created>1416739791771</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1416739791771</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ignoring public and deploy">
+      <created>1416741815474</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1416741815474</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -338,15 +365,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992035" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287827" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -371,20 +400,48 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="0.1.0 changelog" />
+    <MESSAGE value="ignoring public and deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignoring public and deploy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+          <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="300">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
@@ -403,20 +460,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.markdown">
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.84729064" vertical-offset="344" max-vertical-offset="750">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_deploy/index.html">
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.36674815" vertical-offset="150" max-vertical-offset="4350">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+          <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -433,25 +497,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/archives/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="423">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_includes/header.html">
@@ -509,15 +560,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/atom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3915">
+        <state vertical-scroll-proportion="0.66480446" vertical-offset="3378" max-vertical-offset="3915">
           <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
           <folding />
         </state>
@@ -684,33 +731,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="1650">
+          <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/blog/archives/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1065">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05639098" vertical-offset="0" max-vertical-offset="705">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="300">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="1650">
-          <caret line="86" column="432" selection-start-line="86" selection-start-column="432" selection-end-line="86" selection-end-column="432" />
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5027933" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
   </component>
 </project>
-
