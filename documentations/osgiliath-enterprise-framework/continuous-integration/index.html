@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Changelogs - Osgiliath Enterprise</title>
+  <title>Continuous-integration - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,15 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
   <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs">
-  <meta property="og:title" content="Changelogs - Osgiliath Enterprise">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration">
+  <meta property="og:title" content="Continuous-integration - Osgiliath Enterprise">
   
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
@@ -66,7 +66,7 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li >
                     <a rel="index" href="/projects.documentations/">Blog</a>
                 </li>
                 <li >
@@ -112,166 +112,62 @@
       <div id="main" role="main" class="container">
         <div id="content">
           <div class="row">
-  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="Osgiliath Enterprise" />
-    <meta itemprop="description" content="Your enterprise belong to us" />
-    <meta itemprop="url" content="http://osgiliathEnterprise.github.io/projects.documentations" />
-    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="page-content col-md-9">
+    <article role="article">
       
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T19:00:13+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
-        
-      </p>
-    
-    
-    <h1 class="entry-title" itemprop="name headline">
-        Changelogs
-        
-    </h1>
-    
-  </header>
-
-
-<div class="entry-content clearfix" itemprop="articleBody description"><h3>0.1.0</h3>
-
-
-<ol>
-<li>Completely rethought features architecture</li>
-<li>Maven site generation support</li>
-<li>Use of Spring-jms instead of Camel for blueprint business archetype</li>
-<li>Full integration in a CI environment</li>
-<li>Cookbooks added in the documentation</li>
-<li>JMS and Database transactions are now compatibles</li>
-<li>JCA based connection factory to avoid HawtIO unnamed connection factory errors</li>
-</ol>
-
-
-<h3>0.0.7</h3>
-
-
-<ol>
-<li>Hawt IO managing support</li>
-<li>Swagger REST service querying with CDI modules</li>
-<li>New Angular file layout</li>
-<li>Optional Scala programming support</li>
-<li>Bugfixes on REST exception mapper</li>
-<li>Sample now handles errors</li>
-<li>Multiples dependencies versions updates (as well as Javascript ones)</li>
-<li>Updated Javadoc plugin to handle large projects</li>
-</ol>
-
-
-<H3>0.0.6</H3>
-
-
-<ol>
-<li>Liquibase database versioning integration</li>
-<li>JaxRS 2.0 support</li>
-<li>Swagger API/ui REST queries integration (only with blueprint)</li>
-<li>Jaxb Xsd generation</li>
-</ol>
-
-
-<H3>0.0.5</H3>
-
-
-<ol>
-<li>Selenium support</li>
-<li>Centralized Integration tests configuration</li>
-<li>Code smell issues from Sonar</li>
-<li>Javadoc generation</li>
-<li>Travis CI integration</li>
-</ol>
-
-
-<H3>0.0.4</H3>
-
-
-<ol>
-<li>CDI support for routes and business module</li>
-<li>Archetypes and samples stability</li>
-<li>Simplified usage in general</li>
-</ol>
-
-
-<H3>0.0.3</H3>
-
-
-<ol>    <li>No more package as path property (use the standard archetype package property)</li>
-    <li>Karaf 3.0.0.GA</li>
-    <li>All IT&#8217;s test passing! (uses karaf file:/ url instead of on the fly inputstream bundle creation that makes it&#8217;s tests random results)</li>
-<li>CDI 1.1 support via Weld</li>
-</ol>
-
-
-
-
-<H3>0.0.2</h3>
-
-
-
-
-<ol>    <li>Rid of the src/main/lombok folder (lombok code can be put on the src/main/java one)</li>
-    <li>Adding an archetype property &#8216;basePackageWithSlashes&#8217; to generate default folders</li>
-    <li>Removing some unused dependendencies</li>
-</ol>
-
-
-
-</div>
-
-
-      <footer>
-        <p class="meta text-muted">
+        <header class="page-header">
           
-  
+            <p class="meta text-muted text-uppercase">
 
-<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Charlie Mordant</span></span>
 
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T12:47:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
           
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-06-22T19:00:13+02:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
           
-
-<span class="glyphicon glyphicon-tags"></span>&nbsp;
-<span class="categories">
-  
-    <a class='category' href='/projects.documentations/blog/categories/changelogs/'>changelogs</a>
-  
-</span>
-
-
-        </p>
+            <h1 class="entry-title">
+              Continuous-integration
+              
+            </h1>
+          
+        </header>
+      
+      <div class="entry-content">
         
-          <div class="sharing">
+
+      </div>
+      
+        <footer>
+          <p class="meta text-muted">
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T12:47:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+            
+          </p>
+          
+            <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -281,9 +177,9 @@
   
 </div>
 
-        
-        
-      </footer>
+          
+        </footer>
+      
     </article>
     
       <section>
@@ -295,16 +191,16 @@
   </div>
 
   
-  <aside class="sidebar col-md-3">
-    
-      <section class="panel panel-default">
+    <aside class="sidebar col-md-3">
+      
+        <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Recent Posts</h3>
   </div>
   
   <div id="recent_posts" class="list-group">
     
-    <a class="list-group-item active" href="/projects.documentations/blog/2014/06/22/changelogs/">Changelogs</a>
+    <a class="list-group-item " href="/projects.documentations/blog/2014/06/22/changelogs/">Changelogs</a>
     
   </div>
 </section>
@@ -358,8 +254,8 @@
 
 
 
-    
-  </aside>
+      
+    </aside>
   
 </div>
 
@@ -384,8 +280,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html';
         var disqus_script = 'embed.js';
       
     (function () {

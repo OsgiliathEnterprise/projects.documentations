@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Changelogs | Osgiliath Enterprise]]></title>
   <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/categories/changelogs/atom.xml" rel="self"/>
   <link href="http://osgiliathEnterprise.github.io/projects.documentations/"/>
-  <updated>2014-11-20T20:02:20+01:00</updated>
+  <updated>2014-11-23T12:59:26+01:00</updated>
   <id>http://osgiliathEnterprise.github.io/projects.documentations/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
@@ -18,7 +18,21 @@
     <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/"/>
     <updated>2014-06-22T19:00:13+02:00</updated>
     <id>http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs</id>
-    <content type="html"><![CDATA[<h3>0.0.7</h3>
+    <content type="html"><![CDATA[<h3>0.1.0</h3>
+
+
+<ol>
+<li>Completely rethought features architecture</li>
+<li>Maven site generation support</li>
+<li>Use of Spring-jms instead of Camel for blueprint business archetype</li>
+<li>Full integration in a CI environment</li>
+<li>Cookbooks added in the documentation</li>
+<li>JMS and Database transactions are now compatibles</li>
+<li>JCA based connection factory to avoid HawtIO unnamed connection factory errors</li>
+</ol>
+
+
+<h3>0.0.7</h3>
 
 
 <ol>
