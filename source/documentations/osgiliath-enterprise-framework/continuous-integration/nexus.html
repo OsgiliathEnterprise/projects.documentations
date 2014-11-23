@@ -1,0 +1,98 @@
+---
+layout: page
+title: "nexus"
+date: 2014-11-23 16:45
+comments: true
+sharing: true
+footer: true
+---
+
+<article>
+    <article>
+    <header>
+        <h1 id="mirror">Running Osgiliath project behind a Nexus</h1>
+    </header>
+To compile your project using Nexus provided third party dependencies you first have to configure your Nexus as a mirror adding these lines to your $MAVEN_HOME/conf/settings.xml
+``` xml
+    <mirror>
+    <mirror>
+        <id>my_mirror</id>
+        <mirrorOf>*</mirrorOf>
+        <name>My repo</name>
+        <url>repo_url/content/groups/public</url>
+    </mirror>
+    </mirror>
+```
+And finally, add an active profile mocking the <bold>Maven Central</bold> repo by the Internal Nexus url trigger:
+``` xml
+    <profiles>
+    <profile>
+        <id>nexus</id>
+        <!--Enable snapshots for the built in central repo to direct -->
+        <!--all requests to nexus via the mirror -->
+        <repositories>
+            <repository>
+                <id>central</id>
+                <url>http://central</url>
+                <releases><enabled>true</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>central</id>
+                <url>http://central</url>
+                <releases><enabled>true</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
+```
+    Also, to use the Nexus instance for your intergation-tests, run your maven goals with -Dmaven.repos.urls=http://central
+        And if it will always be the case, just add it as a property in your root pom.xml:
+``` xml
+        <properties>...
+            <maven.repos.urls>http://central</maven.repos.urls>
+        </properties>
+``
+    </article>
+    <article id="publish">
+        <header>Publishing snapshots/releases to an Internal Nexus instance</header>
+    </article>
+To be able to publish your artifacts in your Nexus instance, edit your settings.xml file and add two 'servers' called 'releases' and 'snapshots' with your nexus credential
+``` xml
+    <servers>...
+    <server>
+        <id>snapshots</id>
+        <username>my_pseudo</username>
+        <password>my_pwd</password>
+    </server>
+    </servers>
+```
+    Then, configure the different 'configurationManagement' section of your parent pom.xml (here are the defaults)
+``` xml
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Osgiliath Snapshots public</name>
+            <url>https://dist.osgiliath.net/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>Sonatype OSS Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/</url>
+        </repository>
+    </distributionManagement>
+```
+    You finally just have to mvn deploy or mvn release:perform your project to have your binaries hosted!
+    </article>
+    <article id="nexus-pro">
+    <header><h1>Nexus Pro</h1></header>
+        To use Nexus pro staging capabilities just use the default maven goal release:perform with the -Pnexus-pro profile in the command line
+    </article>
+
+</article>

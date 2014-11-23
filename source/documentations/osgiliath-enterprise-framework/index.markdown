@@ -6,33 +6,50 @@ comments: true
 sharing: true
 footer: true
 ---
+<article>
+<article>
+<header>
 <H1>
 	<a href="overview.html" title="Overview" target="_blank">Overview</a>
 </H1>
+</header>
 <ul>
 	<li><a href="overview.html#architecture" title="Architecture" target="_blank">Architecture</a></li>
 	<li><a href="overview.html#reference_sample" title="Reference sample" target="_blank">Reference sample</a></li>
 </ul>
+</article>
+<article>
+<header>
 <H1>
 	<a href="gettingstarted.html" target="_blank">Usage</a>
 </H1>
+</header>
 <ul>
 	<li><a href="gettingstarted.html#prerequisite" target="_blank">Prerequisite</a></li>
 	<li><a href="gettingstarted.html#very_quickstart" target="_blank">Very quickstart</a></li>
 	<li><a href="gettingstarted.html#frameworks_list" target="_blank">Known frameworks used in Osgiliath (and links)</a></li>
 </ul>
+</article>
+<section>
 <H1>Features descriptions and usage</H1>
+<article>
+<header>
 <H2>
 	<a href="archetype-parent.html" target="_blank">Parent archetype</a>
 </H2>
+</header>
 <ul>
 	<li><a href="archetype-parent.html#goal" target="_blank">Purpose</a></li>
 	<li><a href="archetype-parent.html#features" target="_blank">Feature declaration</a></li>
 	<li><a href="archetype-parent.html#properties" target="_blank">Property declaration</a></li>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="archetype-model.html" target="_blank">Model archetype</a>
 </H2>
+</header>
 <ul>
 	<li><a href="archetype-model.html#database" target="_blank">Database module</a></li>
 	<ul>
@@ -43,16 +60,24 @@ footer: true
 		<li><a href="archetype-model.html#tweak" target="_blank">Extending JPA module with REST, JMS or Integration tests</a></li>
 	</ul>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="business-bp-or-cdi.html" target="_blank">Blueprint or CDI?</a>
 </H2>
+</header>
 <ul>
 	<li><a href="business-bp-or-cdi.html#blueprint" target="_blank">Blueprint</a></li>
 	<li><a href="business-bp-or-cdi.html#cdi" target="_blank">CDI</a></li>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="business-archetype.html" target="_blank">Business</a>
 </H2>
+</header>
 <ul>
 	<li><a href="business-archetype.html#reference-osgi" target="_blank">Referencing OSGI service</a></li>
 	<li><a href="business-archetype.html#rest" target="_blank">REST</a></li>
@@ -60,29 +85,46 @@ footer: true
 	<li><a href="business-archetype.html#validation" target="_blank">Validation</a></li>
 	<li><a href="business-archetype.html#itests" target="_blank">Integration tests</a></li>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="route-archetype.html">Route</a>
 </H2>
+</header>
 <ul>
 	<li>Jaxb, Xstream and Json transformation</li>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="ui-archetype.html">UI</a>
 </H2>
+</header>
 <ul>
 	<li>AngularJS primer</li>
 </ul>
+</article>
+<article>
+<header>
 <H2>
 	<a href="administration.html">Administration</a>
 </H2>
+</header>
 <ul>
 	<li><a href="administration.html#liquibase" target="_blank">Database versioning with Liquibase</a></li>
 	<li><a href="administration.html#swagger" target="_blank">REST service query interface with Swagger</a></li>
 	<li><a href="administration.html#hawtio" target="_blank">Monitoring with Hawtio</a></li>
 </ul>
+</article>
+</section>
+<article>
+<header>
 <H2>
 	<a href="cookbooks.html">Cookbooks</a>
 </H2>
+</header>
 <ul>
     <li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.feature/readme.html" target="_blank">Sample of a feature (check it for next examples)</a></li>
 	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.features.karaf-features/net.osgiliath.features.karaf-features.itests/net.osgiliath.features.karaf-features.itests.cdi/readme.html" target="_blank">Using context dependency injection</a></li>
@@ -102,3 +144,5 @@ footer: true
 	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.routes/net.osgiliath.hello.routes.cdi/readme.html" target="_blank">Aggregating, transforming and sending message using routes (CDI)</a></li>
 	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.ui/readme.html" target="_blank">Making an AngularJs website UI</a></li>
 </ul>
+</article>
+</article>

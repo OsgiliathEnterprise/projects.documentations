@@ -78,5 +78,12 @@ Finally, a fully featured (Maven) build chain and project skeletton generation w
 </header>
 Osgiliath framework is mainly an aggregation of existing well known open source libraries, and is also Apache licensed: if something does not fit to your needs, one can always clone the project on Github and make your customization.
 </article>
+<article>
+<header>
+<H2>Continuous integrable</H2>
+</header>
+Osgiliath in thought for enterprise so you'll have easy ways and shortcuts to makes it running in a CI environment
+{% img center /images/osgiliath-enterprise-framework/ci-pipeline.png 800 600 'Osgiliath pipeline' 'Osgiliath pipeline'%}
+</article>
 </article>
 
