@@ -223,45 +223,56 @@ And if it will always be the case, just add it as a property in your root pom.xm
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;properties&gt;</span>...
+</span><span class='line'>        <span class="nt">&lt;maven.repos.urls&gt;</span>http://central<span class="nt">&lt;/maven.repos.urls&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/properties&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+    </article>
+    <article id="publish">
+        <header>Publishing snapshots/releases to an Internal Nexus instance</header>
+    </article>
+To be able to publish your artifacts in your Nexus instance, edit your settings.xml file and add two &#8216;servers&#8217; called &#8216;releases&#8217; and &#8216;snapshots&#8217; with your nexus credential
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;servers&gt;</span>...
+</span><span class='line'><span class="nt">&lt;server&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;id&gt;</span>snapshots<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;username&gt;</span>my_pseudo<span class="nt">&lt;/username&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;password&gt;</span>my_pwd<span class="nt">&lt;/password&gt;</span>
+</span><span class='line'><span class="nt">&lt;/server&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servers&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+Then, configure the different &#8216;configurationManagement&#8217; section of your parent pom.xml (here are the defaults)
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;properties&gt;</span>...
-</span><span class='line'>        <span class="nt">&lt;maven.repos.urls&gt;</span>http://central<span class="nt">&lt;/maven.repos.urls&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/properties&gt;</span>
-</span><span class='line'>``
-</span><span class='line'><span class="nt">&lt;/article&gt;</span>
-</span><span class='line'><span class="nt">&lt;article</span> <span class="na">id=</span><span class="s">&quot;publish&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;header&gt;</span>Publishing snapshots/releases to an Internal Nexus instance<span class="nt">&lt;/header&gt;</span>
-</span><span class='line'><span class="nt">&lt;/article&gt;</span>
-</span><span class='line'>To be able to publish your artifacts in your Nexus instance, edit your settings.xml file and add two &#39;servers&#39; called &#39;releases&#39; and &#39;snapshots&#39; with your nexus credential
-</span></code></pre></td></tr></table></div></figure> xml
-    <servers>&#8230;
-    <server>
-        <id>snapshots</id>
-        <username>my_pseudo</username>
-        <password>my_pwd</password>
-    </server>
-    </servers>
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>Then, configure the different &#39;configurationManagement&#39; section of your parent pom.xml (here are the defaults)
-</span></code></pre></td></tr></table></div></figure> xml
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Osgiliath Snapshots public</name>
-            <url>https://dist.osgiliath.net/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <name>Sonatype OSS Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/</url>
-        </repository>
-    </distributionManagement>
-&#8220;`
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;distributionManagement&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;snapshotRepository&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;id&gt;</span>snapshots<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;name&gt;</span>Osgiliath Snapshots public<span class="nt">&lt;/name&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;url&gt;</span>https://dist.osgiliath.net/nexus/content/repositories/snapshots<span class="nt">&lt;/url&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/snapshotRepository&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;repository&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;id&gt;</span>releases<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;name&gt;</span>Sonatype OSS Nexus Release Repository<span class="nt">&lt;/name&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;url&gt;</span>https://oss.sonatype.org/<span class="nt">&lt;/url&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/repository&gt;</span>
+</span><span class='line'><span class="nt">&lt;/distributionManagement&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 You finally just have to mvn deploy or mvn release:perform your project to have your binaries hosted!
     </article>
     <article id="nexus-pro">
