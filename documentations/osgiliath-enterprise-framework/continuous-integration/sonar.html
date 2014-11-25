@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Continuous-integration - Osgiliath Enterprise</title>
+  <title>Sonar - Osgiliath Enterprise</title>
   <meta name="author" content="Charlie Mordant">
 
   
@@ -14,15 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
   <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration">
-  <meta property="og:title" content="Continuous-integration - Osgiliath Enterprise">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html">
+  <meta property="og:title" content="Sonar - Osgiliath Enterprise">
   
 
   <script src="/projects.documentations/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
@@ -130,53 +130,49 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T15:55:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T21:10:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time></p>
           
           
             <h1 class="entry-title">
-              Continuous-integration
+              Sonar
               
             </h1>
           
         </header>
       
       <div class="entry-content">
-        <p><article>
+        <article>
+    <header>
+        <h1>Sonar</h1>
+    </header>
     <article>
-        <header>
-            <h1>Continuous integration</h1>
-        </header>
-        <ul>
-            <li><a href="jenkins-setup.html" title="Plugins" target="_blank">Useful Jenkins plugins</a></li>
-        </ul>
+In order to add sonar analysis on your project, you&#8217;ve to add a profile on your $MAVEN_HOME/conf/settings.xml:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;profile&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;id&gt;</span>sonarqube<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;properties&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.jdbc.url&gt;</span>jdbc:mysql://localhost:3306/sonardb?useUnicode<span class="ni">&amp;#61;</span>true<span class="ni">&amp;amp;</span>characterEncoding<span class="ni">&amp;#61;</span>utf8<span class="nt">&lt;/sonar.jdbc.url&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.jdbc.driver&gt;</span>com.mysql.jdbc.Driver<span class="nt">&lt;/sonar.jdbc.driver&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.jdbc.username&gt;</span>sonarusr<span class="nt">&lt;/sonar.jdbc.username&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.jdbc.password&gt;</span>sonarpwd<span class="nt">&lt;/sonar.jdbc.password&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.host.url&gt;</span>http://localhost:9000/<span class="nt">&lt;/sonar.host.url&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;sonar.secretKeyPath&gt;</span>/var/lib/jenkins/.sonar/sonar-secret.txt<span class="nt">&lt;/sonar.secretKeyPath&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/properties&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/profile&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+        That&#8217;s it! you just have to run mvn sonar:sonar to run a sonar analysis on the project
     </article>
-    <article>
-        <header>
-            <h2>Publishing binaries</h2>
-        </header>
-        <ul>
-            <li><a href="nexus.html#mirror" title="Binary mirror" target="_blank">Use an artifact mirror (Nexus)</a></li>
-            <li><a href="nexus.html#publish" title="Publish" target="_blank">Publish binaries to Nexus</a></li>
-            <li><a href="nexus.html#nexus-pro" title="Publish Nexus pro" target="_blank">Publish binaries to Nexus Pro</a></li>
-        </ul>
-    </article>
-    <article>
-        <header>
-            <h2>Quality</h2>
-        </header>
-        <ul>
-            <li><a href="sonar.html" title="Quality" target="_blank">Sonar integration</a></li>
-        </ul>
-    <article>
-    <article>
-        <header>
-            <h2>Maven settings</h2>
-        </header>
-        <ul>
-            <li><a href="settings.html" title="Maven settings" target="_blank">Use specified user Maven settings</a></li>
-        </ul>
-    </article>
-</article></p>
+</article>
 
       </div>
       
@@ -196,13 +192,13 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T15:55:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-23T21:10:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
             
           </p>
           
             <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -315,8 +311,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/index.html';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html';
         var disqus_script = 'embed.js';
       
     (function () {
