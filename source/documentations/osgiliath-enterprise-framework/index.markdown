@@ -145,4 +145,18 @@ footer: true
 	<li><a href="http://osgiliathenterprise.github.io/net.osgiliath.parent/net.osgiliath.poms/net.osgiliath.pom.repositories/net.osgiliath.pom.reporting/net.osgiliath.pom.plugins/net.osgiliath.pom.dependency-management/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.ui/readme.html" target="_blank">Making an AngularJs website UI</a></li>
 </ul>
 </article>
+<article>
+	<header>
+		<H2>
+			<a href="continuous-integration/index.html">Integration related</a>
+		</H2>
+	</header>
+	<ul>
+		<li><a href="continuous-integration/site.html">Maven site generation</a></li>
+    	<li><a href="continuous-integration/settings.html">Dealing with Maven settings</a></li>
+    	<li><a href="continuous-integration/jenkins-setup.html">Jenkins Integration</a></li>
+    	<li><a href="continuous-integration/nexus.html">Binary repository</a></li>
+    	<li><a href="continuous-integration/sonar.html">Quality integration (Sonar)</a></li>
+    </ul>
+</article>
 </article>

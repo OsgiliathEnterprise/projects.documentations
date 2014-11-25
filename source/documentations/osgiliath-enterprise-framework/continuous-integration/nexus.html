@@ -52,13 +52,13 @@ And finally, add an active profile mocking the <bold>Maven Central</bold> repo b
         <activeProfile>nexus</activeProfile>
     </activeProfiles>
 ```
-    Also, to use the Nexus instance for your intergation-tests, run your maven goals with -Dmaven.repos.urls=http://central
-        And if it will always be the case, just add it as a property in your root pom.xml:
+Also, to use the Nexus instance for your intergation-tests, run your maven goals with -Dmaven.repos.urls=http://central
+And if it will always be the case, just add it as a property in your root pom.xml:
 ``` xml
         <properties>...
             <maven.repos.urls>http://central</maven.repos.urls>
         </properties>
-``
+```
     </article>
     <article id="publish">
         <header>Publishing snapshots/releases to an Internal Nexus instance</header>
@@ -73,7 +73,7 @@ To be able to publish your artifacts in your Nexus instance, edit your settings.
     </server>
     </servers>
 ```
-    Then, configure the different 'configurationManagement' section of your parent pom.xml (here are the defaults)
+Then, configure the different 'configurationManagement' section of your parent pom.xml (here are the defaults)
 ``` xml
     <distributionManagement>
         <snapshotRepository>
@@ -88,11 +88,11 @@ To be able to publish your artifacts in your Nexus instance, edit your settings.
         </repository>
     </distributionManagement>
 ```
-    You finally just have to mvn deploy or mvn release:perform your project to have your binaries hosted!
+You finally just have to mvn deploy or mvn release:perform your project to have your binaries hosted!
     </article>
     <article id="nexus-pro">
     <header><h1>Nexus Pro</h1></header>
-        To use Nexus pro staging capabilities just use the default maven goal release:perform with the -Pnexus-pro profile in the command line
+To use Nexus pro staging capabilities just use the default maven goal release:perform with the -Pnexus-pro profile in the command line
     </article>
 
 </article>
