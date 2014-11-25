@@ -141,7 +141,23 @@
         </header>
       
       <div class="entry-content">
-        
+        A technical documentation will automatically be generated for your project.
+In order to do this, just run
+    mvn -Preporting site site:stage
+This will generate:
+* Javadoc
+* JXR (Java cross references)
+* Useful project info report
+
+This will copy any of your readme.md file situated in your project root in the src/site/markdown folder of your project in order to have access on it in the doc
+
+After configuring the distributionConfiguration i.e.
+    <site>
+        <id>github-pages</id>
+        <name>Github GH Pages</name>
+        <url>scm:git:git@github.com:OsgiliathEnterprise/net.osgiliath.parent.git</url>
+    </site>
+Of your project, you&#8217;ll be able to publish it in a remote repository usin mvn site-deploy
       </div>
       
         <footer>
