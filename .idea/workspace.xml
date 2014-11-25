@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="ignoring public and deploy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/osgiliath-enterprise-framework/ci-pipeline.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/jenkins-setup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/nexus.html" />
+    <list default="true" id="2deda03e-4747-4c0a-8f9c-a085b42b268e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_deploy" afterPath="$PROJECT_DIR$/_deploy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown" afterPath="$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown" afterPath="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projects.documentations.iws" />
@@ -34,51 +30,35 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.markdown" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.266666" vertical-offset="908" max-vertical-offset="1425">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nexus.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/nexus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.291667" vertical-offset="1037" max-vertical-offset="1560">
-              <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.markdown" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46421662" vertical-offset="0" max-vertical-offset="517">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.733334" vertical-offset="173" max-vertical-offset="780">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.markdown" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.733334" vertical-offset="1748" max-vertical-offset="2295">
-              <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.31548756" vertical-offset="0" max-vertical-offset="523">
+              <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="sonar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="540">
+              <caret line="27" column="94" selection-start-line="27" selection-start-column="94" selection-end-line="27" selection-end-column="94" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -101,6 +81,8 @@
         <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/jenkins-setup.html" />
         <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown" />
         <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/nexus.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html" />
+        <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/settings.html" />
         <option value="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown" />
       </list>
     </option>
@@ -138,7 +120,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,6 +224,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +361,13 @@
       <option name="project" value="LOCAL" />
       <updated>1416741815474</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Deploying to nexus">
+      <created>1416760434606</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1416760434606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -397,7 +385,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20600858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21173105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -425,32 +413,14 @@
     </option>
     <MESSAGE value="0.1.0 changelog" />
     <MESSAGE value="ignoring public and deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignoring public and deploy" />
+    <MESSAGE value="Deploying to nexus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploying to nexus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="300">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1035">
@@ -469,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
           <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,23 +689,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1065">
           <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.markdown">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.markdown">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05639098" vertical-offset="0" max-vertical-offset="705">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/administration.html">
@@ -750,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13711151" vertical-offset="0" max-vertical-offset="547">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3193116" vertical-offset="0" max-vertical-offset="810">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,52 +740,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31548756" vertical-offset="0" max-vertical-offset="523">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.733334" vertical-offset="1748" max-vertical-offset="2295">
-          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.733334" vertical-offset="1748" max-vertical-offset="2295">
+          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="22.266666" vertical-offset="908" max-vertical-offset="1425">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/nexus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.291667" vertical-offset="1037" max-vertical-offset="1560">
           <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/sonar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="540">
+          <caret line="27" column="94" selection-start-line="27" selection-start-column="94" selection-end-line="27" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/index.markdown">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46421662" vertical-offset="0" max-vertical-offset="517">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state vertical-scroll-proportion="-13.733334" vertical-offset="173" max-vertical-offset="780">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/continuous-integration/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31548756" vertical-offset="0" max-vertical-offset="523">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

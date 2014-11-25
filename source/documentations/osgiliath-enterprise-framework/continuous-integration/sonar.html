@@ -1,0 +1,30 @@
+---
+layout: page
+title: "sonar"
+date: 2014-11-23 21:10
+comments: true
+sharing: true
+footer: true
+---
+<article>
+    <header>
+        <h1>Sonar</h1>
+    </header>
+    <article>
+In order to add sonar analysis on your project, you've to add a profile on your $MAVEN_HOME/conf/settings.xml:
+``` xml
+        <profile>
+            <id>sonarqube</id>
+            <properties>
+                <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonardb?useUnicode&#61;true&amp;characterEncoding&#61;utf8</sonar.jdbc.url>
+                <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+                <sonar.jdbc.username>sonarusr</sonar.jdbc.username>
+                <sonar.jdbc.password>sonarpwd</sonar.jdbc.password>
+                <sonar.host.url>http://localhost:9000/</sonar.host.url>
+                <sonar.secretKeyPath>/var/lib/jenkins/.sonar/sonar-secret.txt</sonar.secretKeyPath>
+            </properties>
+        </profile>
+```
+        That's it! you just have to run mvn sonar:sonar to run a sonar analysis on the project
+    </article>
+</article>
