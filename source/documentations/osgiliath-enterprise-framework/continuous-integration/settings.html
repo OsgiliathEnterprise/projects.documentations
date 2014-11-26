@@ -1,0 +1,12 @@
+---
+layout: page
+title: "settings"
+date: 2014-11-23 22:19
+comments: true
+sharing: true
+footer: true
+---
+If you want to specify another Maven settings than your default one, you've got to tell Exam (The integration test engine) to also use it.
+Here's how to launch specified settings aware maven compilation:
+
+    mvn clean install -Dmaven.user.settings=$MAVEN_LOCAL_SETTINGS -s $MAVEN_LOCAL_SETTINGS
