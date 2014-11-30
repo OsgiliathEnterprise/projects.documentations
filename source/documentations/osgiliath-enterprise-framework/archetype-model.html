@@ -17,6 +17,26 @@ Here you can specify your database access configuration and expose the connectio
 
 By default Derby databases are supported, but you can tweak it to support Oracle, Mysql, PostGres, HSQL...
 
+In order to declare a database, you just have to edit your [parent]/[features]/src/main/resources/[database.cfg] and tweak the properties:
+    osgi.jdbc.driver.name=derbyclient-pool-xa #driver to use, remove the '-xa' suffix if you don't need transactions
+    databaseName=${project.parent.artifactId}.model.database #name of the database
+    user=APP #db user
+    password=APP #db password
+    dataSourceName=${project.parent.artifactId}.model.database #name with which you'll be able to reference the created datasource in your persistence.xml
+    portNumber=${database.port} #Port of the DB (change it in the [parent] pom.xml
+    serverName=localhost #Server host
+    serverAutoStart=true #Autostarts the database server on the host, set to false if it is already started
+    createDatabase=create #autocreates the database (it'll reuse it if it already exists)
+    aries.xa.username=APP #name for the user accessing to the database when using transaction
+    aries.xa.password=APP #password for the user accessing to the database when using transaction
+    aries.xa.name=${project.parent.artifactId}.model.database #unique name of the resource for transaction manager
+
+Then, you just have to reference this config file in your feature.xml prefixing the deployed config file by etc/org.ops4j.datasource-
+    <feature name="my.model" version="${project.version}">
+        <configfile finalname="/etc/org.ops4j.datasource-myDB.cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
+    </feature>
+
+Alternatively, you can define your datasource via xml:
 The database configuration file must be located in the src/main/resources/OSGI-INF/blueprint/&lt;whatever&gt;.xml
 
 Here's how to declare a datasource bean:
