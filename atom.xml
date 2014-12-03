@@ -4,7 +4,7 @@
   <title><![CDATA[Osgiliath Enterprise]]></title>
   <link href="http://osgiliathEnterprise.github.io/projects.documentations/atom.xml" rel="self"/>
   <link href="http://osgiliathEnterprise.github.io/projects.documentations/"/>
-  <updated>2014-11-26T09:59:57+01:00</updated>
+  <updated>2014-12-03T19:59:04+01:00</updated>
   <id>http://osgiliathEnterprise.github.io/projects.documentations/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
@@ -18,7 +18,17 @@
     <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/"/>
     <updated>2014-06-22T19:00:13+02:00</updated>
     <id>http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs</id>
-    <content type="html"><![CDATA[<h3>0.1.0</h3>
+    <content type="html"><![CDATA[<h3>0.1.1</h3>
+
+
+<ol>
+<li>Start level and description on all features</li>
+<li>Pax-JDBC declarative database creation</li>
+<li>Generate readme automatically in technical documentation while present at root</li>
+</ol>
+
+
+<h3>0.1.0</h3>
 
 
 <ol>

@@ -152,59 +152,27 @@ Here you can specify your database access configuration and expose the connectio
 
 By default Derby databases are supported, but you can tweak it to support Oracle, Mysql, PostGres, HSQL&#8230;
 
-The database configuration file must be located in the src/main/resources/OSGI-INF/blueprint/&lt;whatever&gt;.xml
-
-Here&#8217;s how to declare a datasource bean:
-<div><script src='https://gist.github.com/801d489902168369e2d1.js'></script>
-<noscript><pre><code>&lt;bean id=&quot;derbyServerIP&quot; class=&quot;java.net.InetAddress&quot;
-		factory-method=&quot;getByName&quot;&gt;
-		&lt;argument value=&quot;localhost&quot;&gt;&lt;/argument&gt;
-	&lt;/bean&gt;
-	&lt;bean id=&quot;derbyServer&quot; class=&quot;org.apache.derby.drda.NetworkServerControl&quot;
-		destroy-method=&quot;shutdown&quot;&gt;
-		&lt;argument ref=&quot;derbyServerIP&quot; /&gt;
-		&lt;argument value=&quot;$[database.port]&quot; /&gt;
-	&lt;/bean&gt;
-	&lt;bean id=&quot;pw&quot; class=&quot;java.io.PrintWriter&quot;&gt;
-		&lt;argument value=&quot;derbyServer.log&quot; /&gt;
-	&lt;/bean&gt;
-	&lt;bean id=&quot;derbyServerStarter&quot; class=&quot;net.osgiliath.database.starter.DatabaseStarter&quot;
-		depends-on=&quot;derbyServer&quot; init-method=&quot;init&quot;&gt;
-		&lt;property name=&quot;control&quot; ref=&quot;derbyServer&quot;&gt;&lt;/property&gt;
-		&lt;property name=&quot;writer&quot; ref=&quot;pw&quot;&gt;&lt;/property&gt;
-	&lt;/bean&gt;
-	&lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.derby.jdbc.ClientXADataSource&quot;
-		depends-on=&quot;derbyServerStarter&quot;&gt;
-		&lt;property name=&quot;user&quot; value=&quot;APP&quot;&gt;&lt;/property&gt;
-		&lt;property name=&quot;password&quot; value=&quot;APP&quot;&gt;&lt;/property&gt;
-		&lt;property name=&quot;databaseName&quot; value=&quot;${project.parent.artifactId}.database&quot; /&gt;
-		&lt;property name=&quot;createDatabase&quot; value=&quot;create&quot;&gt;&lt;/property&gt;
-		&lt;property name=&quot;serverName&quot; value=&quot;localhost&quot;&gt;&lt;/property&gt;
-		&lt;property name=&quot;portNumber&quot; value=&quot;$[database.port]&quot;&gt;&lt;/property&gt;
-	&lt;/bean&gt;</code></pre></noscript></div>
+In order to declare a database, you just have to edit your [parent]/[features]/src/main/resources/[database.cfg] and tweak the properties:
+    osgi.jdbc.driver.name=derbyclient-pool-xa #driver to use, remove the &#8216;-xa&#8217; suffix if you don&#8217;t need transactions
+    databaseName=${project.parent.artifactId}.model.database #name of the database
+    user=APP #db user
+    password=APP #db password
+    dataSourceName=${project.parent.artifactId}.model.database #name with which you&#8217;ll be able to reference the created datasource in your persistence.xml
+    portNumber=${database.port} #Port of the DB (change it in the [parent] pom.xml
+    serverName=localhost #Server host
+    serverAutoStart=true #Autostarts the database server on the host, set to false if it is already started
+    createDatabase=create #autocreates the database (it&#8217;ll reuse it if it already exists)
 
 
- Here&#8217;s how to expose the database as a service without transaction support:
-    <div><script src='https://gist.github.com/375819345e1b7d6217f0.js'></script>
-<noscript><pre><code>&lt;service ref=&quot;dataSource&quot; interface=&quot;javax.sql.DataSource&quot;&gt;
-		&lt;service-properties&gt;
-			&lt;entry key=&quot;osgi.jndi.service.name&quot; value=&quot;jdbc/${project.parent.artifactId}.database&quot; /&gt;
-		&lt;/service-properties&gt;
-	&lt;/service&gt;</code></pre></noscript></div>
-
-And with transactional support:
-    <div><script src='https://gist.github.com/ed07aa38cebc41694d88.js'></script>
-<noscript><pre><code>&lt;service ref=&quot;dataSource&quot; interface=&quot;javax.sql.XADataSource&quot;&gt;
-		&lt;service-properties&gt;
-			&lt;entry key=&quot;osgi.jndi.service.name&quot; value=&quot;jdbc/${project.parent.artifactId}.database.xa&quot; /&gt;
-		&lt;/service-properties&gt;
-	&lt;/service&gt;</code></pre></noscript></div>
-
+Then, you just have to reference this config file in your feature.xml prefixing the deployed config file by etc/org.ops4j.datasource-
+    <feature name="my.model" version="${project.version}">
+        <configfile finalname="/etc/org.ops4j.datasource-myDB.cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
+    </feature>
 
 
 Defining an other kind of datasource:
 
-You must define a new feature on the parent project features list (see features sub-module), containing the OSGI compliant database driver (in order to see if it&#8217;s OSGI compliant, check the META-INF/MANIFEST.MF file on the jar, it must contains an Export-Package  section.
+You must define a new feature on the parent project features list (see features sub-module), containing the OSGI compliant database driver as well as a corresponding <a href="https://ops4j1.jira.com/wiki/display/PAXJDBC/Documentation">Pax-jdbc</a> compliant JDBC driver (you can import the corresponding <a href="https://github.com/ops4j/org.ops4j.pax.jdbc/blob/master/pax-jdbc-features/src/main/resources/features.xml">features</a>).
 Then, modify the osgi.bnd file of the database module removing the org.apache.derby.jdbc package import and adding those of your driver.
 
 Finally change the dataSource bean declaration in the blueprint file.
