@@ -27,30 +27,17 @@ In order to declare a database, you just have to edit your [parent]/[features]/s
     serverName=localhost #Server host
     serverAutoStart=true #Autostarts the database server on the host, set to false if it is already started
     createDatabase=create #autocreates the database (it'll reuse it if it already exists)
-    aries.xa.username=APP #name for the user accessing to the database when using transaction
-    aries.xa.password=APP #password for the user accessing to the database when using transaction
-    aries.xa.name=${project.parent.artifactId}.model.database #unique name of the resource for transaction manager
+
 
 Then, you just have to reference this config file in your feature.xml prefixing the deployed config file by etc/org.ops4j.datasource-
     <feature name="my.model" version="${project.version}">
         <configfile finalname="/etc/org.ops4j.datasource-myDB.cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
     </feature>
 
-Alternatively, you can define your datasource via xml:
-The database configuration file must be located in the src/main/resources/OSGI-INF/blueprint/&lt;whatever&gt;.xml
-
-Here's how to declare a datasource bean:
-{% gist 801d489902168369e2d1 %}
-
- Here's how to expose the database as a service without transaction support:
-    {% gist 375819345e1b7d6217f0 %}
-And with transactional support:
-    {% gist ed07aa38cebc41694d88 %}
-
 
 Defining an other kind of datasource:
 
-You must define a new feature on the parent project features list (see features sub-module), containing the OSGI compliant database driver (in order to see if it's OSGI compliant, check the META-INF/MANIFEST.MF file on the jar, it must contains an Export-Package  section.
+You must define a new feature on the parent project features list (see features sub-module), containing the OSGI compliant database driver as well as a corresponding <a href="https://ops4j1.jira.com/wiki/display/PAXJDBC/Documentation">Pax-jdbc</a> compliant JDBC driver (you can import the corresponding <a href="https://github.com/ops4j/org.ops4j.pax.jdbc/blob/master/pax-jdbc-features/src/main/resources/features.xml">features</a>).
 Then, modify the osgi.bnd file of the database module removing the org.apache.derby.jdbc package import and adding those of your driver.
 
 Finally change the dataSource bean declaration in the blueprint file.

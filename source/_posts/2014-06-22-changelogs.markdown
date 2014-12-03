@@ -5,6 +5,12 @@ date: 2014-06-22 19:00:13 +0200
 comments: true
 categories: changelogs
 ---
+<h3>0.1.1</h3>
+<ol>
+<li>Start level and description on all features</li>
+<li>Pax-JDBC declarative database creation</li>
+<li>Generate readme automatically in technical documentation while present at root</li>
+</ol>
 <h3>0.1.0</h3>
 <ol>
 <li>Completely rethought features architecture</li>
