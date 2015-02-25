@@ -14,14 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
-  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
   <meta property="og:title" content="Blueprint or CDI - Osgiliath Enterprise">
   
 
@@ -88,7 +88,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="subscribe-rss" href="/projects.documentations/atom.xml" title="subscribe via RSS">
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
                         <img class="hidden-xs" src="/projects.documentations/images/rss.png" alt="RSS">
                     </a>
@@ -97,7 +97,7 @@
             </ul>
             
                 <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
-                    <input type="hidden" name="q" value="site:osgiliathEnterprise.github.io/projects.documentations">
+                    <input type="hidden" name="q" value="site:osgiliathEnterprise.github.io">
                     <div class="form-group">
                         <input class="form-control" type="text" name="q" placeholder="Search">
                     </div>
@@ -167,7 +167,7 @@ You will have a counterpart in the xml file:
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJaxRs&quot;</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJaxRs&quot;</span>
 </span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJaxRS&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;helloObjectRepository&quot;</span> <span class="na">ref=</span><span class="s">&quot;helloObjectRepository&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;/bean&gt;</span>
@@ -197,7 +197,7 @@ In order to enable a certain kind of annotations for your bundles, you&#8217;ve 
 </pre></td><td class='code'><pre><code class='xml'><span class='line'>Require-Capability: osgi.extender;filter:=&quot;(osgi.extender=pax.cdi)&quot;,\ <span class="c">&lt;!-- Declaration to enable CDI on your project (you&#39;ll also need a bean.xml file)--&gt;</span>
 </span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=pax-cdi-extension)&quot;,\ <span class="c">&lt;!-- allow export and reference OSGI services with annotations --&gt;</span>
 </span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=validation)&quot;,\ <span class="c">&lt;!-- Enables JSR 303 (validation) annotations scanning --&gt;</span>
-</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=jaxrs-cdi)&quot;,\ <span class="c">&lt;!-- Enables REST services declarations via annotations --&gt;</span>
+</span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=cxf-integration-cdi)&quot;,\ <span class="c">&lt;!-- Enables REST services declarations via annotations --&gt;</span>
 </span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=deltaspike-core-api)&quot;,\ <span class="c">&lt;!-- DS is a nice angular stone for CDI --&gt;</span>
 </span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=camel-cdi-extension)&quot;,\ <span class="c">&lt;!-- JMS annotations scanning --&gt;</span>
 </span><span class='line'> org.ops4j.pax.cdi.extension;filter:=&quot;(extension=eager)&quot; <span class="c">&lt;!-- Enables Eager beans annotations, they&#39;ll start when bundle state will be &#39;Active&#39; --&gt;</span>
@@ -238,7 +238,7 @@ In addition, you must have at least a beans.xml file located on src/main/resourc
           
             <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -335,7 +335,7 @@ In addition, you must have at least a beans.xml file located on src/main/resourc
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2014 - Charlie Mordant<br>
+  Copyright &copy; 2015 - Charlie Mordant<br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
@@ -351,8 +351,8 @@ In addition, you must have at least a beans.xml file located on src/main/resourc
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html';
         var disqus_script = 'embed.js';
       
     (function () {

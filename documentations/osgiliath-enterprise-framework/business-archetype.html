@@ -14,14 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html">
+  <link rel="canonical" href="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html">
   <link href="/projects.documentations/favicon.png" type="image/png" rel="icon">
-  <link href="/projects.documentations/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Osgiliath Enterprise" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html">
+  <meta property="og:url" content="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html">
   <meta property="og:title" content="Business Archetype - Osgiliath Enterprise">
   
 
@@ -88,7 +88,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="subscribe-rss" href="/projects.documentations/atom.xml" title="subscribe via RSS">
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
                         <img class="hidden-xs" src="/projects.documentations/images/rss.png" alt="RSS">
                     </a>
@@ -97,7 +97,7 @@
             </ul>
             
                 <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
-                    <input type="hidden" name="q" value="site:osgiliathEnterprise.github.io/projects.documentations">
+                    <input type="hidden" name="q" value="site:osgiliathEnterprise.github.io">
                     <div class="form-group">
                         <input class="form-control" type="text" name="q" placeholder="Search">
                     </div>
@@ -145,7 +145,7 @@
 <header>
 <H1>Purpose</H1>
 </header>
-The business module is done to make calculation and processing on your datas. You&#8217;ll be able to test it (unitary or in its full environment), export its services (synchronously or asynchronously), use functional programing.
+The business module is done to make computation and processing on your datas. You&#8217;ll be able to test it (unitary or in its full environment), export its services (synchronously or asynchronously), use functional programing.
 <article>
 <header>
 <H1 id="reference-osgi">Referencing services</H1>
@@ -295,13 +295,66 @@ And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent
 
 Or <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJaxRS.java" target="_blank">via annotations</a>:
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Eager</span>
-</span><span class='line'><span class="nd">@CXFEndpoint</span><span class="o">(</span><span class="n">url</span><span class="o">=</span><span class="s">&quot;/helloService&quot;</span><span class="o">,</span> <span class="n">providersClasses</span><span class="o">=</span> <span class="o">{</span><span class="n">JAXBElementProvider</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">JSONProvider</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">ExceptionXmlMapper</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
-</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloServiceJaxRS</span> <span class="kd">implements</span> <span class="n">net</span><span class="o">.</span><span class="na">osgiliath</span><span class="o">.</span><span class="na">hello</span><span class="o">.</span><span class="na">business</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">HelloServiceJaxRS</span> <span class="o">{...</span>
-</span></code></pre></td></tr></table></div></figure>
+        <div><script src='https://gist.github.com/ccdeaa87d00af7559ad3.js'></script>
+<noscript><pre><code>package conf;
+
+/*
+ * #%L
+ * Osgiliath integration tests JaxRS CDI
+ * %%
+ * Copyright (C) 2013 - 2015 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+import helpers.cxf.exception.handling.jaxrs.mapper.ExceptionXmlMapper;
+
+import java.util.Set;
+
+import javax.inject.Inject;
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+import net.osgiliath.features.karaf.jaxrs.cdi.HelloServiceJaxRS;
+
+import org.apache.cxf.jaxrs.provider.JAXBElementProvider;
+
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import com.google.common.collect.Sets;
+import com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider;
+import com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON;
+import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
+
+@ApplicationPath(&quot;/helloService&quot;)
+public class CXFApplication extends Application {
+  
+      @Inject private HelloServiceJaxRS helloService;
+      @Inject private ApiListingResourceJSON swaggerService;
+      @Override
+      public Set&lt; Object &gt; getSingletons() {
+          return Sets.&lt; Object &gt;newHashSet(
+              helloService,
+              swaggerService,
+              new JAXBElementProvider(),
+              new ExceptionXmlMapper(),
+              new ResourceListingProvider(),
+              new ApiDeclarationProvider(),
+              new JacksonJsonProvider());
+      }
+}
+</code></pre></noscript></div>
+
 </article>
 <article>
 <header>
@@ -538,7 +591,7 @@ You can now make your integration test prefixing it by IT<test class name> (fail
           
             <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html" data-via="Tcharl" data-counturl="http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="small"></div>
@@ -635,7 +688,7 @@ You can now make your integration test prefixing it by IT<test class name> (fail
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2014 - Charlie Mordant<br>
+  Copyright &copy; 2015 - Charlie Mordant<br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
@@ -651,8 +704,8 @@ You can now make your integration test prefixing it by IT<test class name> (fail
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html';
-        var disqus_url = 'http://osgiliathEnterprise.github.io/projects.documentations/documentations/osgiliath-enterprise-framework/business-archetype.html';
+        var disqus_identifier = 'http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html';
+        var disqus_url = 'http://osgiliathEnterprise.github.io/documentations/osgiliath-enterprise-framework/business-archetype.html';
         var disqus_script = 'embed.js';
       
     (function () {

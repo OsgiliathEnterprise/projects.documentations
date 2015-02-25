@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Changelogs | Osgiliath Enterprise]]></title>
-  <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/categories/changelogs/atom.xml" rel="self"/>
-  <link href="http://osgiliathEnterprise.github.io/projects.documentations/"/>
-  <updated>2014-12-31T13:51:39+01:00</updated>
-  <id>http://osgiliathEnterprise.github.io/projects.documentations/</id>
+  <link href="http://osgiliathEnterprise.github.io/blog/categories/changelogs/atom.xml" rel="self"/>
+  <link href="http://osgiliathEnterprise.github.io/"/>
+  <updated>2015-02-25T18:47:41+01:00</updated>
+  <id>http://osgiliathEnterprise.github.io/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
     <email><![CDATA[cmordant1@gmail.com]]></email>
@@ -15,10 +15,22 @@
   
   <entry>
     <title type="html"><![CDATA[Changelogs]]></title>
-    <link href="http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs/"/>
+    <link href="http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs/"/>
     <updated>2014-06-22T19:00:13+02:00</updated>
-    <id>http://osgiliathEnterprise.github.io/projects.documentations/blog/2014/06/22/changelogs</id>
-    <content type="html"><![CDATA[<h3>0.1.1</h3>
+    <id>http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs</id>
+    <content type="html"><![CDATA[<h3>0.1.2</h3>
+
+
+<ol>
+<li>Huge dependency refactor</li>
+<li>Use of JaxRS application instead of proprietary annotations for CDI</li>
+<li>Upgrade to Karaf 3.0.3</li>
+<li>Sass support</li>
+<li>Angular, Bower and NPM upgrades</li>
+</ol>
+
+
+<h3>0.1.1</h3>
 
 
 <ol>
