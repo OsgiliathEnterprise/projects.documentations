@@ -27,7 +27,7 @@ public class HelloServiceJaxRS implements net.osgiliath.hello.business.impl.Hell
 {% endcodeblock %}
 You will have a counterpart in the xml file:
 {% codeblock lang:xml %}
-<bean id="helloServiceJaxRs"
+    <bean id="helloServiceJaxRs"
 		class="net.osgiliath.hello.business.impl.services.impl.HelloServiceJaxRS">
 		<property name="helloObjectRepository" ref="helloObjectRepository"></property>
 	</bean>
@@ -51,7 +51,7 @@ In order to enable a certain kind of annotations for your bundles, you've to add
 Require-Capability: osgi.extender;filter:="(osgi.extender=pax.cdi)",\ <!-- Declaration to enable CDI on your project (you'll also need a bean.xml file)-->
  org.ops4j.pax.cdi.extension;filter:="(extension=pax-cdi-extension)",\ <!-- allow export and reference OSGI services with annotations -->
  org.ops4j.pax.cdi.extension;filter:="(extension=validation)",\ <!-- Enables JSR 303 (validation) annotations scanning -->
- org.ops4j.pax.cdi.extension;filter:="(extension=jaxrs-cdi)",\ <!-- Enables REST services declarations via annotations -->
+ org.ops4j.pax.cdi.extension;filter:="(extension=cxf-integration-cdi)",\ <!-- Enables REST services declarations via annotations -->
  org.ops4j.pax.cdi.extension;filter:="(extension=deltaspike-core-api)",\ <!-- DS is a nice angular stone for CDI -->
  org.ops4j.pax.cdi.extension;filter:="(extension=camel-cdi-extension)",\ <!-- JMS annotations scanning -->
  org.ops4j.pax.cdi.extension;filter:="(extension=eager)" <!-- Enables Eager beans annotations, they'll start when bundle state will be 'Active' -->

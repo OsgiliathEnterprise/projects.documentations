@@ -5,6 +5,14 @@ date: 2014-06-22 19:00:13 +0200
 comments: true
 categories: changelogs
 ---
+<h3>0.1.2</h3>
+<ol>
+<li>Huge dependency refactor</li>
+<li>Use of JaxRS application instead of proprietary annotations for CDI</li>
+<li>Upgrade to Karaf 3.0.3</li>
+<li>Sass support</li>
+<li>Angular, Bower and NPM upgrades</li>
+</ol>
 <h3>0.1.1</h3>
 <ol>
 <li>Start level and description on all features</li>

@@ -10,7 +10,7 @@ footer: true
 <header>
 <H1>Purpose</H1>
 </header>
-The business module is done to make calculation and processing on your datas. You'll be able to test it (unitary or in its full environment), export its services (synchronously or asynchronously), use functional programing.
+The business module is done to make computation and processing on your datas. You'll be able to test it (unitary or in its full environment), export its services (synchronously or asynchronously), use functional programing.
 <article>
 <header>
 <H1 id="reference-osgi">Referencing services</H1>
@@ -113,11 +113,7 @@ And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent
 
 Or <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJaxRS.java" target="_blank">via annotations</a>:
 
-{% codeblock lang:java %}
-@Eager
-@CXFEndpoint(url="/helloService", providersClasses= {JAXBElementProvider.class, JSONProvider.class, ExceptionXmlMapper.class})
-public class HelloServiceJaxRS implements net.osgiliath.hello.business.impl.HelloServiceJaxRS {...
-{% endcodeblock %}
+        {% gist https://gist.github.com/anonymous/ccdeaa87d00af7559ad3 %}
 </article>
 <article>
 <header>
