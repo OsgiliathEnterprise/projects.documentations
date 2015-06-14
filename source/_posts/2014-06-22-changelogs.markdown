@@ -5,6 +5,14 @@ date: 2014-06-22 19:00:13 +0200
 comments: true
 categories: changelogs
 ---
+<h3>0.1.8</h3>
+<ol>
+<li>Typo fixes</li>
+<li>Social feature with Apache Agora</li>
+<li>Many dependencies upgrades</li>
+<li>Better Archetype generation</li>
+<li>Sonar quality improved</li>
+</ol>
 <h3>0.1.2</h3>
 <ol>
 <li>Huge dependency refactor</li>
