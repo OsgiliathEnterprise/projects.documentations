@@ -10,7 +10,7 @@ footer: true
 <header>
 <H1 id="prerequisite">Prerequisite</H1>
 </header>
-You must have a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 1.6</a> or newer (JDK 8 is not supported for now) in order to compile.
+You must have a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 1.6</a> or newer in order to compile.
 <a href="http://maven.apache.org/download.cgi">Maven 3.2.1 minimum</a> is used as a build tool.
 <a href="http://nodejs.org/download/">Npm</a> and <a href="http://rubyinstaller.org/">ruby</a> must be installed to compile the UI module.
 <a href="http://karaf.apache.org/index/community/download.html">Karaf 3.0.x</a> as a runtime environment.
@@ -28,6 +28,8 @@ sudo npm -g install bower
 gem install sass
 gem install compass
 {% endcodeblock %}
+	! Debian users: install node-legacy with apt to be able to compile the framework !
+	! Windows users: project pathes can be longer than windows can handle: take care to create your project in a workspace that is not too deep in the hierarchy !
 </article>
 <article>
 <header>

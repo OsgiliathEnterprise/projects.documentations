@@ -121,13 +121,16 @@ footer: true
 </section>
 <section>
 <article>
-<header>
-<H2>Video tutorials</h2>
-</header>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=M_Bqpr-r8Rc">Environment setup</a></li>
-<li><a href="https://www.youtube.com/watch?v=_jntJtjNHWY">UI coding</a></li>
-</ul>
+    <header>
+        <H2>Video tutorials</h2>
+    </header>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=M_Bqpr-r8Rc">Environment setup</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_jntJtjNHWY">UI coding</a></li>
+        <li><a href="https://www.youtube.com/watch?v=LxQY5JyLc_k">Testing</a></li>
+        <li><a href="https://www.youtube.com/watch?v=BAXUd2uw5Co">Client Server interaction</a></li>
+        <li><a href="https://www.youtube.com/watch?v=71bVWJc8Wbc">Database persistence</a></li>
+    </ul>
 </article>
 <article>
 <header>
