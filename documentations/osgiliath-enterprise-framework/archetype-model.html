@@ -153,22 +153,38 @@ Here you can specify your database access configuration and expose the connectio
 By default Derby databases are supported, but you can tweak it to support Oracle, Mysql, PostGres, HSQL&#8230;
 
 In order to declare a database, you just have to edit your [parent]/[features]/src/main/resources/[database.cfg] and tweak the properties:
-    osgi.jdbc.driver.name=osgiliathderbystandalone-pool-xa #driver to use, remove the &#8216;-xa&#8217; suffix if you don&#8217;t need transactions
-    databaseName=${project.parent.artifactId}.model.database #name of the database
-    user=APP #db user
-    password=APP #db password
-    dataSourceName=${project.parent.artifactId}.model.database #name with which you&#8217;ll be able to reference the created datasource in your persistence.xml
-    portNumber=${database.port} #Port of the DB (change it in the [parent] pom.xml
-    serverName=localhost #Server host
-    serverAutoStart=true #Autostarts the database server on the host, set to false if it is already started
-    createDatabase=create #autocreates the database (it&#8217;ll reuse it if it already exists)
-
+    <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'>    <span class="n">osgi</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">driver</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">osgiliathderbystandalone</span><span class="o">-</span><span class="n">pool</span><span class="o">-</span><span class="n">xa</span> <span class="err">#</span><span class="n">driver</span> <span class="n">to</span> <span class="n">use</span><span class="o">,</span> <span class="n">remove</span> <span class="n">the</span> <span class="err">&#39;</span><span class="o">-</span><span class="n">xa</span><span class="err">&#39;</span> <span class="n">suffix</span> <span class="k">if</span> <span class="n">you</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">need</span> <span class="n">transactions</span>
+</span><span class='line'>    <span class="n">databaseName</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">project</span><span class="o">.</span><span class="na">parent</span><span class="o">.</span><span class="na">artifactId</span><span class="o">}.</span><span class="na">model</span><span class="o">.</span><span class="na">database</span> <span class="err">#</span><span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">database</span>
+</span><span class='line'>    <span class="n">user</span><span class="o">=</span><span class="n">APP</span> <span class="err">#</span><span class="n">db</span> <span class="n">user</span>
+</span><span class='line'>    <span class="n">password</span><span class="o">=</span><span class="n">APP</span> <span class="err">#</span><span class="n">db</span> <span class="n">password</span>
+</span><span class='line'>    <span class="n">dataSourceName</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">project</span><span class="o">.</span><span class="na">parent</span><span class="o">.</span><span class="na">artifactId</span><span class="o">}.</span><span class="na">model</span><span class="o">.</span><span class="na">database</span> <span class="err">#</span><span class="n">name</span> <span class="n">with</span> <span class="n">which</span> <span class="n">you</span><span class="err">&#39;</span><span class="n">ll</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">reference</span> <span class="n">the</span> <span class="n">created</span> <span class="n">datasource</span> <span class="n">in</span> <span class="n">your</span> <span class="n">persistence</span><span class="o">.</span><span class="na">xml</span>
+</span><span class='line'>    <span class="n">portNumber</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">database</span><span class="o">.</span><span class="na">port</span><span class="o">}</span> <span class="err">#</span><span class="n">Port</span> <span class="n">of</span> <span class="n">the</span> <span class="nf">DB</span> <span class="o">(</span><span class="n">change</span> <span class="n">it</span> <span class="n">in</span> <span class="n">the</span> <span class="o">[</span><span class="n">parent</span><span class="o">]</span> <span class="n">pom</span><span class="o">.</span><span class="na">xml</span>
+</span><span class='line'>    <span class="n">serverName</span><span class="o">=</span><span class="n">localhost</span> <span class="err">#</span><span class="n">Server</span> <span class="n">host</span>
+</span><span class='line'>    <span class="n">serverAutoStart</span><span class="o">=</span><span class="kc">true</span> <span class="err">#</span><span class="n">Autostarts</span> <span class="n">the</span> <span class="n">database</span> <span class="n">server</span> <span class="n">on</span> <span class="n">the</span> <span class="n">host</span><span class="o">,</span> <span class="n">set</span> <span class="n">to</span> <span class="kc">false</span> <span class="k">if</span> <span class="n">it</span> <span class="n">is</span> <span class="n">already</span> <span class="n">started</span>
+</span><span class='line'>    <span class="n">createDatabase</span><span class="o">=</span><span class="n">create</span> <span class="err">#</span><span class="n">autocreates</span> <span class="n">the</span> <span class="nf">database</span> <span class="o">(</span><span class="n">it</span><span class="err">&#39;</span><span class="n">ll</span> <span class="n">reuse</span> <span class="n">it</span> <span class="k">if</span> <span class="n">it</span> <span class="n">already</span> <span class="n">exists</span><span class="o">)</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
 
 Then, you just have to reference this config file in your feature.xml prefixing the deployed config file by etc/org.ops4j.datasource-
-    <feature name="my.model" version="${project.version}">
-        <configfile finalname="/etc/org.ops4j.datasource-[nameofyourdb].cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
-    </feature>
-
+    <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">&quot;my.model&quot;</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;configfile</span> <span class="na">finalname=</span><span class="s">&quot;/etc/org.ops4j.datasource-[nameofyourdb].cfg&quot;</span><span class="nt">&gt;</span>mvn:com.foo/my/${project.version}/cfg/database<span class="nt">&lt;/configfile&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
 
 Defining an other kind of datasource:
 
