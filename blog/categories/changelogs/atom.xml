@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Changelogs | Osgiliath Enterprise]]></title>
   <link href="http://osgiliathEnterprise.github.io/blog/categories/changelogs/atom.xml" rel="self"/>
   <link href="http://osgiliathEnterprise.github.io/"/>
-  <updated>2015-06-14T15:23:30+02:00</updated>
+  <updated>2016-03-26T16:54:11+01:00</updated>
   <id>http://osgiliathEnterprise.github.io/</id>
   <author>
     <name><![CDATA[Charlie Mordant]]></name>
@@ -18,7 +18,18 @@
     <link href="http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs/"/>
     <updated>2014-06-22T19:00:13+02:00</updated>
     <id>http://osgiliathEnterprise.github.io/blog/2014/06/22/changelogs</id>
-    <content type="html"><![CDATA[<h3>0.1.8</h3>
+    <content type="html"><![CDATA[<h3>0.3.2</h3>
+
+
+<ol>
+<li>Karaf 4.0.4 support: all modules have been reimplemented</li>
+<li>ActiveMQ 5.13 (better Stomp over websocket support</li>
+<li>Model on blueprint annotation scanning</li>
+<li>Get rid of the blueprint alternatives</li>
+</ol>
+
+
+<h3>0.1.8</h3>
 
 
 <ol>

@@ -153,7 +153,7 @@ Here you can specify your database access configuration and expose the connectio
 By default Derby databases are supported, but you can tweak it to support Oracle, Mysql, PostGres, HSQL&#8230;
 
 In order to declare a database, you just have to edit your [parent]/[features]/src/main/resources/[database.cfg] and tweak the properties:
-    osgi.jdbc.driver.name=derbyclient-pool-xa #driver to use, remove the &#8216;-xa&#8217; suffix if you don&#8217;t need transactions
+    osgi.jdbc.driver.name=osgiliathderbystandalone-pool-xa #driver to use, remove the &#8216;-xa&#8217; suffix if you don&#8217;t need transactions
     databaseName=${project.parent.artifactId}.model.database #name of the database
     user=APP #db user
     password=APP #db password
@@ -166,35 +166,34 @@ In order to declare a database, you just have to edit your [parent]/[features]/s
 
 Then, you just have to reference this config file in your feature.xml prefixing the deployed config file by etc/org.ops4j.datasource-
     <feature name="my.model" version="${project.version}">
-        <configfile finalname="/etc/org.ops4j.datasource-myDB.cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
+        <configfile finalname="/etc/org.ops4j.datasource-[nameofyourdb].cfg">mvn:com.foo/my/${project.version}/cfg/database</configfile>
     </feature>
 
 
 Defining an other kind of datasource:
 
 You must define a new feature on the parent project features list (see features sub-module), containing the OSGI compliant database driver as well as a corresponding <a href="https://ops4j1.jira.com/wiki/display/PAXJDBC/Documentation">Pax-jdbc</a> compliant JDBC driver (you can import the corresponding <a href="https://github.com/ops4j/org.ops4j.pax.jdbc/blob/master/pax-jdbc-features/src/main/resources/features.xml">features</a>).
-Then, modify the osgi.bnd file of the database module removing the org.apache.derby.jdbc package import and adding those of your driver.
+Then, modify the osgi.bnd file of the entity module removing the org.apache.derby.jdbc package import and adding those of your driver.
 
 Finally change the dataSource bean declaration in the blueprint file.
 
-Also, if you changed something on the datasource definition, you&#8217;ll also have to modify the datasource linkage in the model pom.xml (the parent of the jpa and database one).
+Also, if you changed something on the datasource definition, you&#8217;ll also have to modify the datasource linkage in the model module pom.xml (the parent of the daos and entities one) as well as the database credentials in the parent pom.
 </article>
-<article>
-<header>
-<H2 id="jpa">JPA module</H2>
-</header>
-The model module is here to define your model objects (those which will be persisted) as well as the method for accessing them.
-
-<p><h3>Datasource connection definition</h3><br/>
-Edit the src/main/resources/META-INF/persistence.xml file of your module and change the &lt;jta-data-source&gt;osgi:service/jdbc/${project.parent.artifactId}.database.xa&lt;/jta-data-source&gt; and the &lt;non-jta-data-source&gt; Sections (referencing the non xa exported one).
-If you want to disable the transactional access, you&#8217;ve also to change the &#8216;transaction-type&#8217; value to &#8216;RESOURCE_LOCAL&#8217;
-</p>
-<p>
-<h3>Model object definition</h3><br/>
-In order to define a new model object, you&#8217;ve got to extends the &#8216;AbstractEntity&#8217; abstract class on your src/main/java folder.
-All Java files that are located on this folder will be &#8216;delombokized&#8217; e.g they will interpret the lombok annotations and generate the according Java code.
-Here&#8217;s an example of a model entity:
-<div><script src='https://gist.github.com/db59c28832bb3c1f67f8.js'></script>
+    <article>
+        <header>
+            <H2 id="entities">Entities module</H2>
+        </header>
+    </article>
+    <p><h3>Datasource connection definition</h3><br/>
+    Edit the src/main/resources/META-INF/persistence.xml file of your module and change the &lt;jta-data-source&gt;osgi:service/jdbc/${project.parent.artifactId}.database.xa&lt;/jta-data-source&gt; and the &lt;non-jta-data-source&gt; Sections (referencing the non xa exported one).
+    If you want to disable the transactional access, you&#8217;ve also to change the &#8216;transaction-type&#8217; value to &#8216;RESOURCE_LOCAL&#8217;
+    </p>
+    <p>
+    <h3>Model object definition</h3><br/>
+    In order to define a new model object, you&#8217;ve got to extends the &#8216;AbstractEntity&#8217; abstract class of the src/main/java folder.
+    All Java files that are located on this folder will be &#8216;delombokized&#8217; e.g they will interpret the lombok annotations and generate the according Java code.
+    Here&#8217;s an example of a model entity:
+    <div><script src='https://gist.github.com/db59c28832bb3c1f67f8.js'></script>
 <noscript><pre><code>@Data
 // equals, hashcode, getters and setters
 @Builder
@@ -230,11 +229,16 @@ public class HelloEntity extends AbstractEntity implements Serializable /* in or
 }</code></pre></noscript></div>
 
 
-Then reference this class on the &lt;class&gt; section of the src/main/resources/META-INF/persistence.xml file
-</p>
+    Then reference this class on the &lt;class&gt; section of the src/main/resources/META-INF/persistence.xml file
+    </p>
+<article>
+<header>
+<H2 id="jpa">DAO module</H2>
+</header>
+The dao module declares method for accessing or persisting entities.
 <p>
 <h3>Declaring DAOs</h3><br/>
-In order to declare a Data Access Object its API via an interface:
+In order to declare a Data Access Object you&#8217;ve to expose its API to others via an interface:
 <div><script src='https://gist.github.com/346ce65959d8876f7c63.js'></script>
 <noscript><pre><code>public interface HelloObjectRepository {
     Collection&lt;? extends HelloEntity&gt; findByHelloObjectMessage(
@@ -245,7 +249,7 @@ In order to declare a Data Access Object its API via an interface:
 }</code></pre></noscript></div>
 
 
-Then, with the help of spring data jpa, that make all the basic operations available, you&#8217;ve to code a very small implementation:
+Then, with the help of spring data jpa that make all the basic CRUD operations available, you&#8217;ve to code a very small implementation:
     <div><script src='https://gist.github.com/85c5c141dc8581242794.js'></script>
 <noscript><pre><code>public class HelloObjectJpaRepository extends
 	SimpleJpaRepository&lt;HelloEntity, Long&gt; implements HelloObjectRepository {
@@ -306,20 +310,7 @@ Then, with the help of spring data jpa, that make all the basic operations avail
 }</code></pre></noscript></div>
 
 
-</p>
-<p>
-Finally, you&#8217;ve to define the bean wiring on the src/main/resources/OSGI-INF/blueprint/<whatever>.xml
-<div><script src='https://gist.github.com/36a228726b40da2cfb35.js'></script>
-<noscript><pre><code>&lt;bean id=&quot;helloObjectRepository&quot; class=&quot;net.osgiliath.hello.model.jpa.repository.impl.HelloObjectJpaRepository&quot;&gt;
-		&lt;argument value=&quot;${project.artifactId}.model.HelloEntity&quot;&gt;&lt;/argument&gt;
-		&lt;jpa:context unitname=&quot;${project.artifactId}Pu&quot;&gt;&lt;/jpa:context&gt; 
-		&lt;tx:transaction method=&quot;*&quot; value=&quot;Required&quot; /&gt;
-	&lt;/bean&gt;</code></pre></noscript></div>
-
-
-You can also expose this bean on the OSGI service registry as follow:
-<div><script src='https://gist.github.com/c1fde63ac0d3baffa517.js'></script>
-<noscript><pre><code>&lt;service ref=&quot;helloObjectRepository&quot; interface=&quot;net.osgiliath.hello.model.jpa.repository.HelloObjectRepository&quot; /&gt;</code></pre></noscript></div>
+    Note that the OsgiService annotation exposes this implementation to other modules (via blueprint annotation compilation processing, which exposes it via the Osgi Service registry).
 
 </p>
 <article>
@@ -337,7 +328,7 @@ In order to add REST or JMS support to the JPA module, remove all net.osgiliath 
 </pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;dependency&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;groupId&gt;</span>net.osgiliath.framework<span class="nt">&lt;/groupId&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;version&gt;</span>${osgiliath.framework.maven.version}<span class="nt">&lt;/version&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;artifactId&gt;</span>net.osgiliath.features.karaf-features-full<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;artifactId&gt;</span>net.osgiliath.feature.webservices or net.osgiliath.feature.routes<span class="nt">&lt;/artifactId&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;type&gt;</span>xml<span class="nt">&lt;/type&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;classifier&gt;</span>features<span class="nt">&lt;/classifier&gt;</span>
 </span><span class='line'><span class="nt">&lt;/dependency&gt;</span>
@@ -349,23 +340,31 @@ Then, add these lines on your osgi.bnd Import-Package section:
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'> org.springframework.transaction,\
-</span><span class='line'> javax.transaction,\
-</span><span class='line'> org.apache.camel,\
-</span><span class='line'> org.springframework.validation.beanvalidation,\
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>Require-Bundle: org.hibernate.validator
+</span><span class='line'>Import-Package: \
+</span><span class='line'> javax.annotation;version=0,\
+</span><span class='line'> !javax.transaction,\
+</span><span class='line'> javax.transaction;version=&#39;[1.1,2)&#39;,\
+</span><span class='line'> javax.servlet;version=&#39;[3,4)&#39;,\
+</span><span class='line'> org.springframework.data.domain;resolution:=optional,\
+</span><span class='line'> org.apache.camel.builder.xml,\
+</span><span class='line'> org.apache.camel.model.rest,\
+</span><span class='line'> org.apache.camel.support,\
+</span><span class='line'> org.apache.cxf.transport.servlet,\
+</span><span class='line'> org.apache.cxf.service.factory,\
+</span><span class='line'> io.swagger.jaxrs.listing,\
 </span><span class='line'> *
-</span></code></pre></td></tr></table></div></figure>
-For JMS, and the following for REST:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'> org.apache.cxf.jaxrs.provider,\
-</span><span class='line'> org.apache.cxf.jaxrs.provider.json,\
-</span><span class='line'> org.apache.cxf.jaxrs.impl.tl,\
-</span><span class='line'> helpers.cxf.exception.handling.jaxrs.mapper,\
-</span><span class='line'> *
+</span><span class='line'>
 </span></code></pre></td></tr></table></div></figure>
 Finally, follow the REST, JMS or Itests sections of the business module documentation
 </article>
@@ -492,7 +491,7 @@ Finally, follow the REST, JMS or Itests sections of the business module document
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2015 - Charlie Mordant<br>
+  Copyright &copy; 2016 - Charlie Mordant<br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.

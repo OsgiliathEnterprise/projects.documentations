@@ -153,27 +153,6 @@ The business module is done to make computation and processing on your datas. Yo
 You can reference OSGI services via two ways: via annotations or xml.
 <article>
 <header>
-<H2>Xml way: Blueprint</H2>
-</header>
-Blueprint is an OSGI spec allowing you to reference OSGI services and inject it in your beans. The xml file to edit is located in the src/main/resources/OSGI-INF/blueprint/<context>.xml
-
-You can reference and inject in bean like <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">this</a>:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;helloObjectRepository&quot;</span>
-</span><span class='line'>		<span class="na">interface=</span><span class="s">&quot;net.osgiliath.hello.model.jpa.repository.HelloObjectRepository&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- OSGI service reference --&gt;</span>
-</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJMS&quot;</span>
-</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJMS&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;helloObjectRepository&quot;</span> <span class="na">ref=</span><span class="s">&quot;helloObjectRepository&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/bean&gt;</span><span class="c">&lt;!-- Injection of the service reference in the HelloServicesJMS bean--&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-</article>
-<article>
-<header>
 <H2>Service reference via annotation</H2>
 </header>
 You can also inject your services <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJMS.java" target="_blank">via Annotations</a> (Pax-CDI).
@@ -276,21 +255,27 @@ And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;jaxrs:server</span> <span class="na">id=</span><span class="s">&quot;helloServiceCXF&quot;</span> <span class="na">address=</span><span class="s">&quot;/helloService&quot;</span><span class="nt">&gt;</span><span class="c">&lt;!-- exposes the service at the address &lt;server&gt;/cxf/helloService/&lt;Path&gt;--&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;jaxrs:serviceBeans&gt;</span>
-</span><span class='line'>			<span class="nt">&lt;ref</span> <span class="na">component-id=</span><span class="s">&quot;helloServiceJaxRs&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- referenced blueprint bean to expose --&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;/jaxrs:serviceBeans&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;jaxrs:providers&gt;</span>
-</span><span class='line'>			<span class="nt">&lt;ref</span> <span class="na">component-id=</span><span class="s">&quot;jaxbProvider&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>			<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;validationException&quot;</span>
-</span><span class='line'>				<span class="na">class=</span><span class="s">&quot;helpers.cxf.exception.handling.jaxrs.mapper.ExceptionXmlMapper&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- validation exception post processor --&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;/jaxrs:providers&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/jaxrs:server&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;cxf:bus&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;cxf:features&gt;</span>
-</span><span class='line'>			<span class="nt">&lt;cxf:logging</span> <span class="nt">/&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;/cxf:features&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/cxf:bus&gt;</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'>		<span class="nd">@Eager</span>
+</span><span class='line'>		<span class="nd">@ApplicationPath</span><span class="o">(</span><span class="s">&quot;/helloService&quot;</span><span class="o">)</span>
+</span><span class='line'>		<span class="nd">@Slf4j</span>
+</span><span class='line'>		<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CXFApplication</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>		<span class="nd">@Inject</span>
+</span><span class='line'>		<span class="kd">private</span> <span class="kd">transient</span> <span class="n">HelloService</span> <span class="n">helloService</span><span class="o">;</span>
+</span><span class='line'>		<span class="nd">@Inject</span>
+</span><span class='line'>		<span class="kd">private</span> <span class="kd">transient</span> <span class="n">SwaggerAPIAccessService</span> <span class="n">swagger</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>		<span class="nd">@Override</span>
+</span><span class='line'>		<span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="nf">getSingletons</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>					<span class="k">return</span> <span class="n">Sets</span><span class="o">.&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="nf">newHashSet</span><span class="o">(</span><span class="n">helloService</span>
+</span><span class='line'>							<span class="k">new</span> <span class="nf">SwaggerSerializers</span><span class="o">(),</span>
+</span><span class='line'>							<span class="k">new</span> <span class="nf">ValidationExceptionMapper</span><span class="o">(),</span>
+</span><span class='line'>							<span class="k">new</span> <span class="nf">JacksonJsonProvider</span><span class="o">());</span>
+</span><span class='line'>							<span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 Or <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJaxRS.java" target="_blank">via annotations</a>:
@@ -361,92 +346,96 @@ public class CXFApplication extends Application {
 <H1 id="jms">Messaging</H1>
 </header>
 You can also consume or produce asynchronous messages.
-In order to do this references jms factory on your blueprint context and exposes it with spring jms template:
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>    <span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;jmsTemplateContainerListenerFactory&quot;</span> <span class="na">interface=</span><span class="s">&quot;net.osgiliath.helpers.activemq.jms.connectionfactory.exporter.listeners.JmsTemplateContainerListenerFactory&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;jmsTemplate&quot;</span> <span class="na">interface=</span><span class="s">&quot;org.springframework.jms.core.JmsOperations&quot;</span>
-</span><span class='line'>               <span class="na">availability=</span><span class="s">&quot;mandatory&quot;</span> <span class="na">filter=</span><span class="s">&quot;(component-type=jms)&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/reference&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;jmsXATemplate&quot;</span> <span class="na">interface=</span><span class="s">&quot;org.springframework.jms.core.JmsOperations&quot;</span>
-</span><span class='line'>               <span class="na">availability=</span><span class="s">&quot;mandatory&quot;</span> <span class="na">filter=</span><span class="s">&quot;(component-type=jmsXA)&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/reference&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;jmsListenerContainer&quot;</span> <span class="na">factory-ref=</span><span class="s">&quot;jmsTemplateContainerListenerFactory&quot;</span> <span class="na">factory-method=</span><span class="s">&quot;create&quot;</span> <span class="na">destroy-method=</span><span class="s">&quot;shutdownGracefully&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;argument</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/argument&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;argument</span> <span class="na">value=</span><span class="s">&quot;helloServiceQueueIn&quot;</span><span class="nt">&gt;&lt;/argument&gt;</span><span class="c">&lt;!-- the JMS URL to receive messages --&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;argument</span> <span class="na">ref=</span><span class="s">&quot;helloServiceJMS&quot;</span><span class="nt">&gt;&lt;/argument&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/bean&gt;</span>
-</span><span class='line'>    <span class="c">&lt;!-- JMS aware service --&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJMS&quot;</span>
-</span><span class='line'>          <span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJMS&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;helloObjectRepository&quot;</span> <span class="na">ref=</span><span class="s">&quot;helloObjectRepository&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;template&quot;</span> <span class="na">ref=</span><span class="s">&quot;jmsXATemplate&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/bean&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+You can consume queued messages and send to with the Camel JMS template (take care, with CDI, @Consume doesn&#8217;t work):
+	<div><script src='https://gist.github.com/28376989d989815ee135.js'></script>
+<noscript><pre><code>@Slf4j
+@ApplicationScoped
+@ContextName
+public class HelloServiceJMS extends RouteBuilder implements HelloService {
+	private final transient DataFormat helloObjectJSonFormat = new JacksonDataFormat(
+		      HelloEntity.class, Hellos.class);
+	/**
+	 * The repository.
+	 */
+	@Inject
+	@OsgiService
+	private transient HelloRepository helloObjectRepository;
+	/**
+	 * JMS producer.
+	 */
+	@Inject
+	@Uri(&quot;jms:topic:helloServiceQueueOut&quot;)
+	private transient ProducerTemplate producer;
 
-You can now consume queued messages and send to with the JMS template (take care, with CDI, @Consume doesn&#8217;t work, so you have to make <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJMS.java" target="_blank">a consumer route</a>):
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloServiceJMS</span> <span class="kd">implements</span> <span class="n">HelloService</span><span class="o">,</span> <span class="n">MessageListener</span> <span class="o">{</span>
-</span><span class='line'>    <span class="nd">@Setter</span>
-</span><span class='line'>    <span class="kd">private</span> <span class="n">JmsOperations</span> <span class="n">template</span><span class="o">;</span>
-</span><span class='line'>    <span class="nd">@Override</span><span class="cm">/* receives messages*/</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onMessage</span><span class="o">(</span><span class="n">Message</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="k">try</span> <span class="o">{</span>
-</span><span class='line'>    <span class="n">HelloEntity</span> <span class="n">helloObject_p</span> <span class="o">=</span> <span class="o">(</span><span class="n">HelloEntity</span><span class="o">)</span> <span class="o">((</span><span class="n">ObjectMessage</span><span class="o">)</span> <span class="n">message</span><span class="o">).</span><span class="na">getObject</span><span class="o">();</span>
-</span><span class='line'>    <span class="n">persistHello</span><span class="o">(</span><span class="n">helloObject_p</span><span class="o">);</span>
-</span><span class='line'>    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">JMSException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="n">log</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&quot;error receiving JMS message&quot;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">persistHello</span><span class="o">(</span><span class="n">HelloEntity</span> <span class="n">hello</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="o">.</span><span class="na">template</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="s">&quot;helloServiceQueueOut&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="nf">MessageCreator</span><span class="o">()</span> <span class="o">{</span><span class="cm">/* send message on another queue */</span>
-</span><span class='line'>    <span class="kd">public</span> <span class="n">Message</span> <span class="nf">createMessage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Session</span> <span class="n">session</span><span class="o">)</span>
-</span><span class='line'>    <span class="kd">throws</span> <span class="n">JMSException</span> <span class="o">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="na">createObjectMessage</span><span class="o">(</span><span class="n">getHellos</span><span class="o">());</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="o">});</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
+	/**
+	 * saves element
+	 * 
+	 * @param helloObject
+	 *            element to save
+	 */
+	@Override
+	public void persistHello(@NotNull @Valid HelloEntity helloObject) {
+		log.info(&quot;****************** Save on JMS Service **********************&quot;);
+		log.info(&quot;persisting new message with jms: &quot; + helloObject.getHelloMessage());
+		this.helloObjectRepository.save(helloObject);
+		ObjectMapper mapper = new ObjectMapper();
+		try {
+			this.producer.sendBody( mapper.writeValueAsString(getHellos()));
+		} catch (CamelExecutionException | JsonProcessingException e) {
+			log.error(&quot;exception marshalling messages&quot;, e);
+			
+		}
+	}
+
+	/**
+	 * Returns all elements.
+	 * 
+	 * @return all elements
+	 */
+	@Override
+	public Hellos getHellos() {
+
+		final Collection&lt;HelloEntity&gt; helloObjects = this.helloObjectRepository.findAll();
+		if (helloObjects.isEmpty()) {
+			throw new UnsupportedOperationException(&quot;You could not call this method when the list is empty&quot;);
+		}
+		return Hellos.builder()
+				.helloCollection(helloObjects.stream().map(x -&gt; x.getHelloMessage()).collect(Collectors.toList())).build();
+	}
+
+	
+	/**
+	 * Deletes all elements.
+	 */
+	@Override
+	public void deleteHellos() {
+		this.helloObjectRepository.deleteAll();
+
+	}
+
+	/**
+	 * receives JMS message.
+	 * 
+	 * @throws Exception
+	 *             Persistence error
+	 */
+	@Override
+	public void configure() throws Exception {
+		from(&quot;properties:{{helloApp.inQueueJMS}}&quot;/*&quot;jms:queue:helloServiceQueueIn&quot;*/)
+		.log(LoggingLevel.INFO, &quot;received jms message: ${body}&quot;).unmarshal(this.helloObjectJSonFormat).process(new Processor() {
+
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				HelloServiceJMS.this.persistHello((HelloEntity) exchange.getIn().getBody());
+			}
+
+		});
+
+	}
+
+}</code></pre></noscript></div>
+
 </article>
 <article>
 <header>
@@ -454,31 +443,6 @@ You can now consume queued messages and send to with the JMS template (take care
 </header>
 You can use JSR303 bean validation to validate your fields.
 
-<a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">Reference the Validator Factory on the blueprint file and inject it in your beans</a>:
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;reference</span> <span class="na">id=</span><span class="s">&quot;validatorFactory&quot;</span> <span class="na">interface=</span><span class="s">&quot;javax.validation.ValidatorFactory&quot;</span>
-</span><span class='line'>		<span class="na">availability=</span><span class="s">&quot;mandatory&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;validator&quot;</span>
-</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;org.springframework.validation.beanvalidation.LocalValidatorFactoryBean&quot;</span>
-</span><span class='line'>		<span class="na">factory-ref=</span><span class="s">&quot;validatorFactory&quot;</span> <span class="na">factory-method=</span><span class="s">&quot;getValidator&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;helloServiceJMS&quot;</span>
-</span><span class='line'>		<span class="na">class=</span><span class="s">&quot;net.osgiliath.hello.business.impl.services.impl.HelloServiceJMS&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;validator&quot;</span> <span class="na">ref=</span><span class="s">&quot;validator&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
-</span><span class='line'>	<span class="nt">&lt;/bean&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-Then, <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.model/net.osgiliath.hello.model.jpa/src/main/java/net/osgiliath/hello/model/jpa/model/HelloObject.java" target="_blank">annotate your model classes</a> with some contraints:
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -501,7 +465,7 @@ Finally, use the injected validator to validate your instances:
 </span><span class='line'>		<span class="k">if</span> <span class="o">(!</span><span class="n">validationResults</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{....}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-You can also <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/conf/CDIValidator.java" target="_blank">bootstrap validator factory</a> via CDI and reference the interceptor in your <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/resources/META-INF/beans.xml" target="_blank">beans.xml</a> to have validation
+You can also <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.sample.webapp/net.osgiliath.sample.webapp.business/net.osgiliath.sample.webapp.business.impl/src/main/java/net/osgiliath/sample/webapp/business/impl/conf/CDIValidator.java" target="_blank">bootstrap validator factory</a> via CDI and reference the interceptor in your <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.sample.webapp/net.osgiliath.sample.webapp.business/net.osgiliath.sample.webapp.business.impl/src/main/resources/META-INF/beans.xml" target="_blank">beans.xml</a> to have validation
 </article>
 <article>
 <header>
@@ -517,10 +481,18 @@ First, you have to define an integration test feature on the feature module (ava
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
 </pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">&quot;mybundle.business.impl.itests&quot;</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>				<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&#39;${osgiliath.framework.maven.version}&#39;</span><span class="nt">&gt;</span>osgiliath-business<span class="nt">&lt;/feature&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&#39;${project.version}&#39;</span><span class="nt">&gt;</span>mybundle.model<span class="nt">&lt;/feature&gt;</span>
-</span><span class='line'>		<span class="nt">&lt;bundle&gt;</span>mvn:${project.parent.groupId}/mybundle.business.spi/${project.version}/jar<span class="nt">&lt;/bundle&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span> <span class="na">prerequisite =</span> <span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>osgiliath-validation-cdi<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span> <span class="na">prerequisite =</span> <span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>osgiliath-rest-cdi-web<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span> <span class="na">prerequisite =</span> <span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>osgiliath-messaging-cdi<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span> <span class="na">prerequisite =</span> <span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>osgiliath-routes-xmlandjson<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;feature</span> <span class="na">version=</span><span class="s">&quot;${project.version}&quot;</span> <span class="na">prerequisite =</span> <span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>osgiliath-messaging-default-broker<span class="nt">&lt;/feature&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;bundle&gt;</span>mvn:${project.parent.groupId}/mybundle.business.spi/${project.version}/jar<span class="nt">&lt;/bundle&gt;</span>
 </span><span class='line'>    <span class="nt">&lt;bundle&gt;</span>file:${project.parent.basedir}/${project.groupId}.business/mybundle.business.impl/target/mybundle.business.impl-${project.version}.jar<span class="nt">&lt;/bundle&gt;</span>
 </span><span class='line'>	<span class="nt">&lt;/feature&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -688,7 +660,7 @@ You can now make your integration test prefixing it by IT<test class name> (fail
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2015 - Charlie Mordant<br>
+  Copyright &copy; 2016 - Charlie Mordant<br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
