@@ -155,7 +155,7 @@ You can reference OSGI services via two ways: via annotations or xml.
 <header>
 <H2>Service reference via annotation</H2>
 </header>
-You can also inject your services <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJMS.java" target="_blank">via Annotations</a> (Pax-CDI).
+You inject your services <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.sample.webapp/net.osgiliath.sample.webapp.business/net.osgiliath.sample.webapp.business.impl/src/main/java/net/osgiliath/sample/webapp/business/impl/messaging/HelloServiceJMS.java" target="_blank">via Annotations</a> (Pax-CDI).
 In order to do this, you&#8217;ve to tweak you pom.xml adding this feature:
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -239,7 +239,7 @@ Using the REST API, you have to tell with path to access your services:
 </span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.blueprint/src/main/resources/OSGI-INF/blueprint/business.osgi-context.xml" target="_blank">expose the service via blueprint</a>:
+And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.sample.webapp/net.osgiliath.sample.webapp.business/net.osgiliath.sample.webapp.business.impl/src/main/java/net/osgiliath/sample/webapp/business/impl/conf/CXFApplication.javal" target="_blank">expose the service via annotations</a>:
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -278,7 +278,6 @@ And finally <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent
 </span><span class='line'>							<span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-Or <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.business/net.osgiliath.hello.business.impl.cdi/src/main/java/net/osgiliath/hello/business/impl/services/impl/HelloServiceJaxRS.java" target="_blank">via annotations</a>:
 
         <div><script src='https://gist.github.com/ccdeaa87d00af7559ad3.js'></script>
 <noscript><pre><code>package conf;
