@@ -5,6 +5,13 @@ date: 2014-06-22 19:00:13 +0200
 comments: true
 categories: changelogs
 ---
+<h3>0.3.2</h3>
+<ol>
+<li>Karaf 4.0.4 support: all modules have been reimplemented</li>
+<li>ActiveMQ 5.13 (better Stomp over websocket support</li>
+<li>Model on blueprint annotation scanning</li>
+<li>Get rid of the blueprint alternatives</li>
+</ol>
 <h3>0.1.8</h3>
 <ol>
 <li>Typo fixes</li>

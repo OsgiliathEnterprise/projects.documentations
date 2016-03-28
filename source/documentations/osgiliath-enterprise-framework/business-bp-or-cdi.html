@@ -7,11 +7,9 @@ sharing: true
 footer: true
 ---
 <article>
-Both business and routes archetypes are declined in two versions: a blueprint one and an xml one.
+    Model archetype is using blueprint (even if the xml file is generated at compile time via annotation scanning) while Business and route archetypes are using CDI (pax-CDI): Why?
 
-These both frameworks have the goal to wire your beans together, but not the same way.
-
-Note that the both framework can NOT reference other beans produced by the other framework in the same bundle (e.g. you can't reference a cdi bean in blueprint and vice versa).
+Note that the both framework can NOT reference other beans produced by the other framework within the same bundle (e.g. you can't reference a cdi bean in blueprint and vice versa).
 <article>
 <header>
 <H1 id="blueprint">Blueprint</H1>
@@ -64,7 +62,7 @@ In addition, you must have at least a beans.xml file located on src/main/resourc
 <li>Config admin properties that are referenced via annotations are not updated while changing, also you can tell from which persistent id the property come from: beware to not publish the same property twice.</li>
 <li>@Consume camel annotation cannot be used with CDI, you have to make a route to handle messages (extends routebuilder).</li>
 <li>@ContextName camel annotation can only reference a 'general' camel context, you can't have many for a platform</li>
-<li>Jpa archetype cannot be CDI-driven as (for the time writing) only aries-jpa can handle persistence.</li>
+<li>Model archetype cannot be CDI-driven as (for the time writing) only aries-jpa can handle persistence.</li>
 </ul>
 </article>
 </article>

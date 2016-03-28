@@ -62,4 +62,8 @@
     <orderEntry type="library" scope="PROVIDED" name="toml (v0.1.1, ruby-2.0.0-p451) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yajl-ruby (v1.1.0, ruby-2.0.0-p451) [gem]" level="application" />
   </component>
+  <component name="sonarModuleSettings">
+    <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />
+    <option name="serverName" value="&lt;PROJECT&gt;" />
+  </component>
 </module>

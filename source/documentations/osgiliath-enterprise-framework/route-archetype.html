@@ -25,7 +25,7 @@ from("{{hello.helloJaxRSEntryPoint}}")
 				.filter(header("webSocketMsgType").isNotEqualTo("heartBeat"))
 .unmarshal(helloObjectJSonFormat)
 				.marshal(jaxBDataFormat)
-				.to("{{net.osgiliath.hello.business.url.helloservice}}/hello")
+				.to("properties:{{net.osgiliath.hello.business.url.helloservice}}/hello")
 }
 {% endcodeblock %}
 
@@ -45,7 +45,7 @@ Then, you've to reference this route on the camelContext section of the blueprin
 	</camelContext>
 <bean id="helloRoute" class="net.osgiliath.hello.routes.HelloRoute"/>
 {% endcodeblock %}
-You can also use @ContextName camel-cdi annotation and reference component in a <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.routes/net.osgiliath.hello.routes.cdi/src/main/java/conf/Components.java">configuration</a> class
+You can also use @ContextName camel-cdi annotation and reference component in a <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/blob/master/net.osgiliath.samples/net.osgiliath.sample.enterprise/net.osgiliath.sample.enterprise.routes/src/main/java/net/osgiliath/sample/enterprise/routes/conf/HelloRouteCDIComponents.java">configuration</a> class
 
-For more informations, check the hello example on <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/tree/master/net.osgiliath.samples/net.osgiliath.hello/net.osgiliath.hello.routes">github</a>
+For more informations, check the hello example on <a href="https://github.com/OsgiliathEnterprise/net.osgiliath.parent/tree/master/net.osgiliath.samples/net.osgiliath.sample.enterprise/net.osgiliath.sample.enterprise.routes">github</a>
 </article>

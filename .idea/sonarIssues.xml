@@ -3,6 +3,56 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/source/_posts/2014-06-22-changelogs.markdown">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-model.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/archetype-parent.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-archetype.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/business-bp-or-cdi.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/cookbooks.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/gettingstarted.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/index.markdown">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/overview.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/source/documentations/osgiliath-enterprise-framework/route-archetype.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/source/products/osgiliath-enterprise-framework/index.markdown">
           <value>
             <set />
